@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  border: none;
+}
+
+:root {
+  --palette1 : #FCB9B2;
+  --palette2 : #461220;
+  --palette3 : #B23A48;
+  --palette4 : #8C2F39;
+  --palette5 : #FED0BB;
+  --header-shadow: rgba(0, 0, 0, 0.15);
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  background: #ffff;
+  font-size: 1.6rem;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  padding: 2rem 12%; 
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(345, 100%, 92%);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 8px var(--header-shadow);
+  transition: background-color 0.3s ease;
+}
+
+header:hover {
+  background-color: var(--palette1);
+}
+
+.logo {
+  width: 120px; 
+  max-height: 150px; 
+  height: auto; 
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Navigation Bar */
+.nav_bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav_bar a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--palette2);
+  transition: 0.2s ease-in;
+  margin-left: 3rem;
+}
+
+.nav_bar a:hover,
+.nav_bar a.active {
+  border-bottom: 3px solid var(--palette3);
+  color: var(--palette3);
+}
+
+.nav_bar a:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+#slider {
+  background: rgba(252, 255, 192, 0.2);
+}
+
+.slideshow-container {
+  z-index: 1;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  position: relative;
+}
+
+.mySlides img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: var(--palette2);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--palette4);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
