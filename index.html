@@ -4,74 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="health, lifestyle, recipes, exercise">
-    <meta name="description" content="How to life a healty lifestyle">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to live a healthy lifestyle">
     <title>Health n Love</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-   <header class="header">
-    <a href="home" class="logo">
-    <img src='/image/logo.png' width="300px">
-    </a>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#home" class="logo">
+            <img src='/image/logo.png' width="300px" alt="Logo">
+        </a>
 
-    <nav class="nav_bar">
-        <a href="#home">Home</a>
-        <a href="#exercise">Exercise</a>
-        <a href="#recipes">Recipes</a>
-    </nav>
-   </header>
+        <nav class="nav_bar">
+            <a href="#home">Home</a>
+            <a href="#exercise">Exercise</a>
+            <a href="#recipes">Recipes</a> 
+            <i class="fas fa-search"></i>
+        </nav>
+    </header>
    
-   <section id="slider">
-    <div class="slideshow-container">
+    <!-- CAROUSEL -->
+    <section id="slider">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+            <img src="/image/slide 1.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+            <img src="/image/slide 2.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+            <img src="/image/slide 3.png" style="width:100%">
+            </div>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        </section>
 
-        <div class="mySlides fade">
-        <img src="/image/slide 1.png" style="width:100%">
-        </div>
-    
-        <div class="mySlides fade">
-        <img src="/image/slide 2.png" style="width:100%">
-        </div>
-    
-        <div class="mySlides fade">
-        <img src="/image/slide 3.png" style="width:100%">
-        </div>
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-    </section>
 
     <script>
-    $(document).ready(function() {
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = $(".mySlides");
-            let dots = $(".dot");
-            slides.hide(); 
-            slideIndex++;
-
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            } 
-
-            dots.removeClass("active"); 
-            $(slides[slideIndex - 1]).show(); 
-            $(dots[slideIndex - 1]).addClass("active"); 
-        }
-
-        setInterval(function() {
+        $(document).ready(function() {
+            let slideIndex = 0;
             showSlides();
-        }, 5000);
-    });
-   </script>
+    
+            function showSlides() {
+                let slides = $(".mySlides");
+                let dots = $(".dot");
+                slides.hide(); 
+                slideIndex++;
+    
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                } 
+    
+                dots.removeClass("active"); 
+                $(slides[slideIndex - 1]).show(); 
+                $(dots[slideIndex - 1]).addClass("active"); 
+            }
+    
+            setInterval(function() {
+                showSlides();
+            }, 5000);
+        });
+        </script>
+
+    <!-- HOME -->
+    <section id="home">
+        <div class="opening">
+            <div class="text">
+                <h2 class="o_title">Do You Know? Nancommunicable Diseases Kill 41 Million People Each Year Because Of Poor Lifestyle</h2>
+                <p class="o_desc indent">Noncommunicable diseases (NCDs), also known as chronic diseases, are the result of a combination of genetic, physiological, environmental and behavioural factors.
+                    The main types of NCD are cardiovascular diseases (such as heart attacks and stroke), cancers, chronic respiratory diseases (such as chronic obstructive pulmonary disease and asthma) 
+                    and diabetes. </p>
+                <p class="o_desc indent">
+                    Based on WHO, NCD are mostly caused by modifiable behavioural risk factors such as unhealty diet, tobacco use, physical inactivity, harmful use of alcohol and then metabolic risk factors
+                    such as raised blood pressure, overweight/obesity, hyperglycemia, hyperlipidemia and lastly environmental risk factors such as air pollution. </p>
+            </div>
+            <div class="image_openning">
+                <img class="obesity" src="image/obesity.jpeg" style="width: 300px;">
+            </div>
+        </div> 
+    </section>
+    <a href="#home" class="back-to-top"><i class="bi bi-arrow-up-square-fill" style="font-size: 5rem;"></i></a>
 </body>
 </html>

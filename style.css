@@ -2,9 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Popins', sans-serif;
   scroll-behavior: smooth;
-  text-decoration: none;
   border: none;
 }
 
@@ -30,9 +29,10 @@ body {
 
 header {
   position: sticky;
+  top: 0; 
   width: 100%;
   padding: 2rem 12%; 
-  z-index: 3;
+  z-index: 10; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,6 +40,7 @@ header {
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 8px var(--header-shadow);
   transition: background-color 0.3s ease;
+
 }
 
 header:hover {
@@ -60,6 +61,10 @@ header:hover {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav_bar a {
   font-size: 1.8rem;
   font-weight: bold;
@@ -69,17 +74,28 @@ header:hover {
 }
 
 .nav_bar a:hover,
-.nav_bar a.active {
+.nav_bar a.active,
+.nav_bar i.fas:hover,
+.nav_bar i.fas:active {
   border-bottom: 3px solid var(--palette3);
   color: var(--palette3);
 }
 
-.nav_bar a:hover {
+.nav_bar a:hover, .nav_bar i.fas:hover{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
+.nav_bar i.fas {
+  font-size: 1.5rem;
+  color: var(--palette2); 
+  margin-left: 2rem; 
+  cursor: pointer; 
+}
+
+
 #slider {
   background: rgba(252, 255, 192, 0.2);
+  padding: 0;
 }
 
 .slideshow-container {
@@ -122,4 +138,71 @@ header:hover {
   to {opacity: 1}
 }
 
+section {
+  padding: 3rem 0 2rem;
+  background-color: #ffff;
+}
+
+#home {
+  display: flex;
+  justify-content: center; 
+  padding: 5rem 10%;
+}
+
+.opening {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.text {
+  flex: 1; 
+  margin-right: 4rem; 
+  display: flex;
+  flex-direction: column; 
+  text-align: justify;
+}
+
+h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 2.4rem; 
+  font-weight: bold;
+  color: var(--palette2); 
+  margin-bottom: 1rem; 
+  text-align: left;
+}
+
+.o_desc {
+  font-size: 1.8rem;
+  line-height: 1.5; 
+  color: var(--palette3); 
+  margin-bottom: 1.5rem; 
+}
+
+.indent {
+  text-indent: 4rem;
+}
+
+
+.obesity {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  color: var(--palette2);
+  text-align: center;
+  line-height: 8rem;
+}
+
+.back-to-top:hover {
+  color: var(--palette3); 
+}
 
