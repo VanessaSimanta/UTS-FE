@@ -74,9 +74,12 @@ a {
 }
 
 .nav_bar a:hover,
-.nav_bar a.active,
-.nav_bar i.fas:hover,
-.nav_bar i.fas:active {
+.nav_bar i.fas:hover{
+  border-bottom: 3px solid var(--palette3);
+  color: var(--palette3);
+}
+
+.nav_active {
   border-bottom: 3px solid var(--palette3);
   color: var(--palette3);
 }
@@ -205,4 +208,5 @@ h2 {
 .back-to-top:hover {
   color: var(--palette3); 
 }
+
 

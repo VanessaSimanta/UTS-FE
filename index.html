@@ -25,6 +25,13 @@
             <a href="#recipes">Recipes</a> 
             <i class="fas fa-search"></i>
         </nav>
+
+        <script>
+            $(".nav_bar a").click(function(){
+                $(".nav_bar a").removeClass("nav_active");
+                $(this).addClass("nav_active");
+            })
+        </script>
     </header>
    
     <!-- CAROUSEL -->
