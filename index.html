@@ -7,7 +7,7 @@
     <meta name="description" content="How to live a healthy lifestyle">
     <title>Health n Love</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -21,8 +21,8 @@
 
         <nav class="nav_bar">
             <a href="#home">Home</a>
-            <a href="#exercise">Exercise</a>
-            <a href="#recipes">Recipes</a> 
+            <a href="exercise.html">Exercise</a>
+            <a href="recipes.html">Recipes</a>
             <i class="fas fa-search"></i>
         </nav>
 
@@ -30,7 +30,7 @@
             $(".nav_bar a").click(function(){
                 $(".nav_bar a").removeClass("nav_active");
                 $(this).addClass("nav_active");
-            })
+            });
         </script>
     </header>
    
@@ -38,15 +38,15 @@
     <section id="slider">
         <div class="slideshow-container">
             <div class="mySlides fade">
-            <img src="/image/slide 1.png" style="width:100%">
+                <img src="/image/slide 1.png" style="width:100%">
             </div>
         
             <div class="mySlides fade">
-            <img src="/image/slide 2.png" style="width:100%">
+                <img src="/image/slide 2.png" style="width:100%">
             </div>
         
             <div class="mySlides fade">
-            <img src="/image/slide 3.png" style="width:100%">
+                <img src="/image/slide 3.png" style="width:100%">
             </div>
         </div>
         <br>
@@ -56,8 +56,7 @@
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-        </section>
-
+    </section>
 
     <script>
         $(document).ready(function() {
@@ -83,25 +82,103 @@
                 showSlides();
             }, 5000);
         });
-        </script>
+    </script>
 
     <!-- HOME -->
     <section id="home">
-        <div class="opening">
+        <h2 class="title">Do You Know? Noncommunicable Diseases Kill 41 Million People Each Year Because of Poor Lifestyle</h2>
+        <div class="content-container">
             <div class="text">
-                <h2 class="o_title">Do You Know? Nancommunicable Diseases Kill 41 Million People Each Year Because Of Poor Lifestyle</h2>
-                <p class="o_desc indent">Noncommunicable diseases (NCDs), also known as chronic diseases, are the result of a combination of genetic, physiological, environmental and behavioural factors.
-                    The main types of NCD are cardiovascular diseases (such as heart attacks and stroke), cancers, chronic respiratory diseases (such as chronic obstructive pulmonary disease and asthma) 
-                    and diabetes. </p>
-                <p class="o_desc indent">
-                    Based on WHO, NCD are mostly caused by modifiable behavioural risk factors such as unhealty diet, tobacco use, physical inactivity, harmful use of alcohol and then metabolic risk factors
-                    such as raised blood pressure, overweight/obesity, hyperglycemia, hyperlipidemia and lastly environmental risk factors such as air pollution. </p>
+                <p class="o_desc indent">Noncommunicable diseases (NCDs), also known as chronic diseases, are the result of a combination of genetic, physiological, environmental, and behavioral factors.
+                    The main types of NCDs are cardiovascular diseases (such as heart attacks and stroke), cancers, chronic respiratory diseases (such as chronic obstructive pulmonary disease and asthma),
+                    and diabetes.</p>
+                <p class="o_desc indent">According to WHO, NCDs are mostly caused by modifiable behavioral risk factors such as unhealthy diet, tobacco use, physical inactivity, harmful use of alcohol, and metabolic risk factors
+                    such as raised blood pressure, overweight/obesity, hyperglycemia, hyperlipidemia, and environmental risk factors such as air pollution.</p>
             </div>
-            <div class="image_openning">
-                <img class="obesity" src="image/obesity.jpeg" style="width: 300px;">
+            <div class="image_container">
+                <img class="obesity" src="image/obesity.jpeg" alt="Obesity Image">
             </div>
-        </div> 
+        </div>
+        <br>
+        <hr>
+        <h2 class="title">Facts About Heart Attacks</h2>
+        <div class="image-container">
+            <img class="heart_attack" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfuenCRpZZtlsA60uvuAofoj8ZBlwKyS62OAqBDDudRK0LZIejSP_pstc4XJnn6oW_PlVZQ6OAo8-MxZ2nAJGF5IIl-Rq2RLFY-S2-vi--8SsB1AwTwcgYfmUus-kripr7rdy9Xg6ioa1ZYdV6dADDQ8YQ8q_EvrMO74WHF5p_0B2JgZiH_zZu7Xab/w400-h300-rw/jantung-koroner.jpg" alt="Heart Attack Graph">
+        </div>
+        <div class="content-container-1">
+            <div class="text-container">
+                <ul class="a_desc">
+                    <li>Cardiovascular diseases are the leading cause of death worldwide, as highlighted by a survey from Our World in Data.</li>
+                    <li>This type of disease is a major risk factor for heart attacks, which are often fatal.</li>
+                    <li>According to data from the Global Burden of Disease and the Institute for Health Metrics and Evaluation (IHME) from 2014 to 2019, heart disease remains the top cause of death in Indonesia, responsible for 14.38% of all fatalities.</li>
+                    <li>The Basic Health Research (Riskesdas) reports a concerning trend, with the prevalence of heart disease rising significantly from 0.5% in 2013 to 1.5% in 2018.</li>
+                    <li>Similarly, in the United States, heart disease is also the leading cause of death, with someone experiencing a heart attack every 40 seconds.</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h2 class="title">What Is Diabetes?</h2>
+        <div class="content-container-2">
+            <div class="image-container">
+                <img class="diabetes" src="/image/pie_chart_diabetes.png" style="width: 300px;" alt="Diabetes Pie Chart">
+            </div>
+            <div class="text-container-1">
+                <p class="desc-b indent">According to WHO (World Health Organization), diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces.
+                    Insulin is a hormone that regulates blood glucose. Hyperglycemia, also called raised blood glucose or raised blood sugar, is a common effect of uncontrolled diabetes and over time leads to serious damage to many of the body's systems,
+                    especially the nerves and blood vessels.</p>
+                <br>
+                <p class="desc-b indent">In 2019, diabetes and kidney disease due to diabetes caused an estimated 2 million deaths. According to the International Diabetes Federation (IDF), Indonesia ranks fifth among countries with the highest number of diabetes cases, with 19.5 million sufferers in 2021,
+                    and is projected to reach 28.6 million by 2045.</p>
+                <br>
+            </div>
+        </div>
+        <div class="content-container-3">
+            <div class="text-container-2">
+                <p class="dyk">Did You Know There Are Two Types of Diabetes?</p>
+                <ul class="desc-b">
+                    <li class="type">
+                        Type 1 Diabetes
+                        <p class="desc-b">Type 1 diabetes is characterized by deficient insulin production and requires daily administration of insulin.</p>
+                    </li>
+                    <li class="type">
+                        Type 2 Diabetes
+                        <p class="desc-b">Type 2 diabetes affects how your body uses sugar (glucose) for energy. It stops the body from using insulin properly,
+                        which can lead to high levels of blood sugar if not treated.</p>
+                    </li>
+                </ul>
+                <br>
+                <p class="dyk">FUN FACT ! Type 2 Diabetes Can Be Prevented Easily, But 80% of People With Diabetes Have Type 2 Diabetes</p>
+                <p class="desc-b">Type 2 diabetes are largely due to poor lifestyle choices, as discussed in the previous sections. Here are ways to prevent type 2 diabetes:</p>
+                <ol class="desc-b">
+                    <li>A healthy diet</li>
+                    <li>Regular physical activity</li>
+                    <li>Maintaining a normal body weight</li>
+                    <li>Avoiding tobacco</li>
+                </ol>
+            </div>
+            <div class="image-column">
+                <img class="diabetes-img" src="/image/insuline.jpeg" alt="Insulin Image">
+                <img class="diabetes-img" src="/image/food.jpeg" alt="Healthy Food Image">
+            </div>
+        </div>
+        <hr>
     </section>
-    <a href="#home" class="back-to-top"><i class="bi bi-arrow-up-square-fill" style="font-size: 5rem;"></i></a>
+
+
+    <!-- REFERENCES -->
+    <section id="references">
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases" target="_blank" rel="noopener noreferrer">Noncommunicable Diseases</a></li>
+            <li><a href="https://www.cdc.gov/heart-disease/data-research/facts-stats/index.html" target="_blank" rel="noopener noreferrer">Heart Diseases Facts</a></li>
+            <li><a href="https://en.antaranews.com/news/294543/cardiovascular-diseases-responsible-for-most-deaths-health-ministry" target="_blank" rel="noopener noreferrer">Cardiovascular diseases responsible for most deaths: Health Ministry</a></li>
+            <li><a href="https://www.who.int/news-room/fact-sheets/detail/diabetes#:~:text=People%20with%20diabetes%20have%20a,damage%20and%20poor%20blood%20flow." target="_blank" rel="noopener noreferrer">Diabetes</a></li>
+            <li><a href="https://sehatnegeriku.kemkes.go.id/baca/blog/20240110/5344736/saatnya-mengatur-si-manis/#:~:text=Menurut%20IDF%2C%20Indonesia%20menduduki%20peringkat,merupakan%20ibu%20dari%20segala%20penyakit." target="_blank" rel="noopener noreferrer">Diabetes in Indonesia</a></li>
+        </ul>
+    </section>
+
+    <a href="#slider" class="back-to-top"><i class="bi bi-arrow-up-square-fill" style="font-size: 5rem;"></i></a>
+
 </body>
 </html>
