@@ -49,4 +49,9 @@ $(document).ready(function(){
     $(".button3").click(function(){
         window.location.href = "bmi.html";
     })
+
+    //JS UNTUK BUTTON STORY
+    $(".button4").click(function(){
+        window.location.href = "https://www.myheart.org.sg/beneficiaries/from-hypertension-to-heart-attack-how-survivors-embrace-the-new-norm/";
+    })
 });
