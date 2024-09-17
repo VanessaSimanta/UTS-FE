@@ -39,4 +39,14 @@ $(document).ready(function(){
     $(".button1").click(function(){
         window.location.href = "recipes.html";
     })
+
+    //JS UNTUK BUTTON EXERCISE
+    $(".button2").click(function(){
+        window.location.href = "exercise.html";
+    })
+
+    //JS UNTUK BUTTON BMI
+    $(".button3").click(function(){
+        window.location.href = "bmi.html";
+    })
 });
