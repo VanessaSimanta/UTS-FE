@@ -12,6 +12,12 @@ $(document).ready(function(){
         }
     });
 
+    //function untuk expanded search bar
+    $(".search-container i").click(function(){
+        const searchInput = $(".search-container input[type='text']");
+        searchInput.focus();
+    });  
+
     //JS UNTUK CAROUSEL
     let slideIndex = 0;
     showSlides();
@@ -54,4 +60,35 @@ $(document).ready(function(){
     $(".button4").click(function(){
         window.location.href = "https://www.myheart.org.sg/beneficiaries/from-hypertension-to-heart-attack-how-survivors-embrace-the-new-norm/";
     })
+
+    //funtion untuk search
+    // Daftar keyword dan id section yang sesuai
+    const keywordMap = {
+        "noncommunicable diseases": "#noncommunicable_diseases",
+        "serangan jantung": "#heart_attack",
+        "heart attack": "#heart_attack",
+        "diabetes": "#diabetes",
+        "diabetes type": "#type",
+        "healthy lifestyle": "#healty_lifestyle",
+        "exercise": "#exercise",
+        "sleep": "#sleep",
+        "stress": "#stress",
+        "smoke": "#smoking",
+    };
+
+    $(".search-container input[type='text']").on('keypress', function(e) {
+        //13 = asci enter
+        if (e.which === 13) { 
+            const keyword = $(this).val().toLowerCase(); 
+            const headerHeight = 150;
+            //if keyword ada di keyword map
+            if (keywordMap[keyword]) {
+                $('html, body').animate({
+                scrollTop: $(keywordMap[keyword]).offset().top - headerHeight
+                }, 800);
+            } else {
+                alert("Hasil Pencarian Tidak Ada");
+            }
+        }
+    });
 });
