@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --palette1: #FCB9B2;
+    --palette2: #461220;
+    --palette3: #B23A48;
+    --palette4: #8C2F39;
+    --palette5: #FED0BB;
+    --header-shadow: rgba(0, 0, 0, 0.15);
+    --underweight: orange;
+    --normal: green;
+    --overweight: lightcoral;
+    --obese:crimson;
+
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--palette4);
+}
+
+.bmi-container {
+    width: 500px;
+    position: relative;
+    background-color: var(--palette5); 
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--header-shadow);
+    display: grid;
+    gap: 1rem;
+    transition: transform 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.bmi-container:hover {
+    transform: scale(1.02); 
+}
+
+.calculator {
+    display: grid;
+    gap: 1rem;
+}
+
+.calculator div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.calculator label {
+    flex: 0 1 120px;
+    font-weight: bold;
+    color: var(--palette2);
+}
+
+.calculator input {
+    flex: 1;
+    font-size: 1.5rem;
+    border: 1px solid var(--palette4);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.calculator input:focus {
+    border-color: var(--palette1);
+    outline: none;
+}
+
+.button5 {
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--palette4);
+    color: #fff;
+    transition: background-color 0.3s;
+    margin-top: 3rem;
+}
+
+.button5:hover {
+    background-color: var(--palette3); 
+}
+
+#references {
+    width: 100%;
+    padding: 2rem 10%;
+}
+
+.output {
+    text-align: center;
+    background-color: var(--palette5);
+}
+
+.output #bmi {
+    font-size: 4rem;
+}
+
+.output #desc strong {
+    text-transform: uppercase;
+}
+
+.scale {
+    display: flex;
+    background-color: var(--palette5);
+}
+
+.scale div {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 4px solid var(--color);
+}
+
+.scale h4 {
+    font-size: 1rem;
+    color: rgb(57, 66, 74);
+}
+
+.underweight {
+    color: var(--underweight);
+}
+
+.healthy {
+    color: var(--normal);
+}
+
+.overweight {
+    color: var(--overweight);
+}
+
+.obese {
+    color: var(--obese);
+}

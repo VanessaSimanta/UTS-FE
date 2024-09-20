@@ -62,7 +62,7 @@ $(document).ready(function(){
     })
 
     //funtion untuk search
-    // Daftar keyword dan id section yang sesuai
+    //Daftar keyword dan id section yang sesuai
     const keywordMap = {
         "noncommunicable diseases": "#noncommunicable_diseases",
         "serangan jantung": "#heart_attack",
@@ -91,4 +91,56 @@ $(document).ready(function(){
             }
         }
     });
+
+    //BMI Calculator
+    $(document).ready(function() {
+        const bmiText = $("#bmi");
+        const descText = $("#desc");
+        const form = $("form");
+      
+        // Reset function
+        function onFormReset() {
+          bmiText.text(0);
+          bmiText.removeClass(); 
+          descText.html("N/A");
+        }
+      
+        // Submit function
+        function onFormSubmit(e) {
+          e.preventDefault();
+      
+          const weight = parseFloat($("#weight").val());
+          const height = parseFloat($("#height").val());
+      
+          if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+            alert("Please enter a valid weight and height");
+            return;
+          }
+      
+          const heightInMeters = height / 100; 
+          //rumus bmi
+          const bmi = weight / Math.pow(heightInMeters, 2);
+          const desc = interpretBMI(bmi);
+      
+          bmiText.text(bmi.toFixed(2));
+          bmiText.addClass(desc); 
+          descText.html(`You are <strong>${desc}</strong>`);
+        }
+      
+        function interpretBMI(bmi) {
+          if (bmi < 18.5) {
+            return "underweight";
+          } else if (bmi < 25) {
+            return "healthy";
+          } else if (bmi < 30) {
+            return "overweight";
+          } else {
+            return "obese";
+          }
+        }
+      
+        // Event listeners
+        form.on("submit", onFormSubmit);
+        form.on("reset", onFormReset);
+      });
 });
