@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Love and Health</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a class="logo">
+            <img src='/image/logo.png' width="300px" alt="Logo">
+        </a>
+
+        <nav class="nav_bar">
+            <!-- secara default home yang active -->
+            <a href="index.html" class="nav_active">Home</a>
+            <a href="exercise.html">Exercise</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="bmi.html">BMI Calculator</a>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+              </div>
+        </nav>
+    </header>
+
+  <!-- Exercises Section -->
+  <section id="exercises">
+    <h2 class="title">Exercises</h2>
+    <div class="exercise-list">
+      <select id="sortExercise" onchange="sortExercise()">
+        <option value="default">Sort by</option>
+        <option value="name">Name</option>
+        <option value="difficulty">Difficulty</option>
+      </select>
+      <ul id="exerciseList">
+        <li>Push Up</li>
+        <li>Sit Up</li>
+        <li>Back Up</li>
+        <li>Running</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
