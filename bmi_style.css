@@ -50,10 +50,12 @@ h1 {
     transition: transform 0.3s;
     margin-top: 2rem;
     margin-bottom: 4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bmi-container:hover {
-    transform: scale(1.02); 
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(243, 39, 39, 0.3);
 }
 
 .calculator {
