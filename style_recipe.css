@@ -129,6 +129,56 @@
     color: var(--palette3);
   }
 
+  #recipe-index {
+    text-align: left;
+    padding: 40px 0;
+    background-color: #fff; /* Background putih */
+}
+
+#recipe-index h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--palette4);
+    margin-left: 110px;
+    margin-bottom: 20px;
+}
+
+.recipe-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 90px;
+}
+
+.category {
+    text-align: center;
+    width: 120px;
+}
+
+.category img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category img:hover {
+    transform: scale(1.1); 
+}
+
+.category p {
+    font-family:monospace;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 45px;
+    margin-top: 10px;
+    color: var(--palette2);
+}
+
+
+
   /*Reference*/
 #references {
     padding: 2rem 10%;
