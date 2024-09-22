@@ -257,6 +257,37 @@
 }
 
 
+/* Grid layout for recipes */
+#recipe-grid {
+  padding: 20px;
+  text-align: center;
+}
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.recipe p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Adjustments for responsive design */
+@media (max-width: 768px) {
+  .recipe-container {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
 
 
 
