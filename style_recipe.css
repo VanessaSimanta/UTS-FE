@@ -183,9 +183,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 2px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 0px;
 }
 
 /* Style for the dropdown */
@@ -217,7 +218,7 @@
 
 .dropdown-content a:hover {
   background-color: var(--palette5);
-  color: white;
+  color: black;
 }
 
 .dropdown:hover .dropdown-content {
