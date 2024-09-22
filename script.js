@@ -16,7 +16,7 @@ $(document).ready(function(){
     $(".search-container i").click(function(){
         const searchInput = $(".search-container input[type='text']");
         searchInput.focus();
-    });  
+    });    
 
     //JS UNTUK CAROUSEL
     let slideIndex = 0;

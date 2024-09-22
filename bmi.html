@@ -17,11 +17,13 @@
     <!-- HEADER -->
     <header class="header">
         <a class="logo">
-            <img src='/image/logo.png' width="300px" alt="Logo">
+            <img src='/image/logo.png' alt="Logo">
         </a>
-
-        <nav class="nav_bar">
-            <!-- secara default home yang active -->
+        <nav class="nav_bar" id="myTopnav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
             <a href="index.html" class="nav_active">Home</a>
             <a href="exercise.html">Exercise</a>
             <a href="recipes.html">Recipes</a>
@@ -29,7 +31,7 @@
             <div class="search-container">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Search...">
-              </div>
+            </div>
         </nav>
     </header>
 
