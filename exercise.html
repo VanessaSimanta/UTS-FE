@@ -6,7 +6,6 @@
     <meta name="keywords" content="health, lifestyle, recipes, exercise">
     <meta name="description" content="How to live a healthy lifestyle">
     <title>Health n Love</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style_exercise.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
@@ -16,24 +15,35 @@
 <body>
     <!-- HEADER -->
     <header class="header">
-      <a class="logo">
-          <img src='/image/logo.png' alt="Logo">
-      </a>
-      <nav class="nav_bar" id="myTopnav">
-          <input type="checkbox" id="check">
-          <label for="check" class="checkbtn">
-              <i class="fas fa-bars"></i>
-          </label>
-          <a href="index.html" class="nav_active">Home</a>
-          <a href="exercise.html">Exercise</a>
-          <a href="recipes.html">Recipes</a>
-          <a href="bmi.html">BMI Calculator</a>
-          <div class="search-container">
-              <i class="fas fa-search"></i>
-              <input type="text" placeholder="Search...">
-          </div>
-      </nav>
-  </header>
+        <a class="logo">
+            <img src='/image/logo.png' width="300px" alt="Logo">
+        </a>
+
+        <nav class="nav_bar">
+            <!-- secara default home yang active -->
+            <a href="index.html" class="nav_active">Home</a>
+            <a href="exercise.html">Exercise</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="bmi.html">BMI Calculator</a>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+              </div>
+        </nav>
+    </header>
+
+    <!-- Tips Section -->
+    <section id="tips">
+      <h2 class="title">Exercise Tips for Beginners</h2>
+      <ul>
+          <li>Start with a warm-up: Do light cardio such as jogging in place for 5 minutes to prepare your body.</li>
+          <li>Focus on form: Ensure your movements are correct to prevent injuries.</li>
+          <li>Stay consistent: Aim to exercise at least 3-4 times per week.</li>
+          <li>Rest is important: Allow your muscles to recover by taking rest days.</li>
+          <li>Hydrate: Drink plenty of water before, during, and after exercise.</li>
+          <li>Gradually increase intensity: Start slow and gradually push yourself as your fitness improves.</li>
+      </ul>
+  </section>
 
     <!-- Exercise Routine Section -->
     <section id="exercises">
@@ -43,8 +53,8 @@
         <div class="exercise-list">
             <label for="sortExercise">Sort by:</label>
             <select id="sortExercise">
-                <option value="default">Select</option>
-                <option value="name">Name</option>
+                <option value="default">Workout at Home</option>
+                <option value="name">Simple Workout</option>
                 <option value="difficulty">Difficulty</option>
             </select>
 
@@ -54,6 +64,11 @@
       <img src="/image/pushup.jpg" alt="Push Up Image" width="100px">
       <span class="exercise-name">Push-Up</span><br>
       <em>Description:</em> A fundamental bodyweight exercise that strengthens your chest, shoulders, and triceps. Start with 10-15 reps while maintaining a straight body from head to heels. Remember to lower yourself slowly and push up with control.
+  </li>
+  <li>
+    <img src="/image/situp.jpg" alt="Sit-Up Image" width="100px">
+    <span class="exercise-name">Sit-Up</span><br>
+    <em>Description:</em> A core-strengthening exercise that primarily targets the abdominal muscles. Lie on your back with your knees bent and feet flat on the floor. With your hands behind your head or crossed on your chest, lift your upper body towards your knees while keeping your lower back on the ground. Perform 15 reps with controlled movement to avoid strain on your neck or back.
   </li>
   <li>
       <img src="/image/squats.jpg" alt="Squats Image" width="100px">
@@ -76,20 +91,6 @@
       <em>Description:</em> A great cardio exercise to increase endurance and burn calories. Start with 10-20 minutes of moderate running or jogging, focusing on proper form and pacing. Gradually increase your duration and speed as your fitness improves.
   </li>
 </ul>
-
-
-    <!-- Tips Section -->
-    <section id="tips">
-        <h2 class="title">Exercise Tips for Beginners</h2>
-        <ul>
-            <li>Start with a warm-up: Do light cardio such as jogging in place for 5 minutes to prepare your body.</li>
-            <li>Focus on form: Ensure your movements are correct to prevent injuries.</li>
-            <li>Stay consistent: Aim to exercise at least 3-4 times per week.</li>
-            <li>Rest is important: Allow your muscles to recover by taking rest days.</li>
-            <li>Hydrate: Drink plenty of water before, during, and after exercise.</li>
-            <li>Gradually increase intensity: Start slow and gradually push yourself as your fitness improves.</li>
-        </ul>
-    </section>
 
     <!-- REFERENCES -->
     <section id="references">
