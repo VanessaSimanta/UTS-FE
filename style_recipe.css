@@ -115,15 +115,15 @@ body {
     margin-bottom: 20px;
 }
 
-/* Responsif untuk layar lebih kecil */
 @media (max-width: 768px) {
     .recipe-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar kecil */
-        grid-template-rows: auto; /* Baris otomatis sesuai konten */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto; 
     }
 }
 
-/* Dropdown style */
+
+/* Base style for dropdown container */
 .dropdown-container {
   display: flex;
   justify-content: space-between;
@@ -134,12 +134,12 @@ body {
   margin-top: 0px;
 }
 
-/* Style for the dropdown */
 .dropdown {
   display: inline-block;
   position: relative;
   margin: 10px;
 }
+
 
 .dropdown-content {
   display: none;
@@ -166,9 +166,11 @@ body {
   color: black;
 }
 
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 
 .dropdown button {
   background-color: var(--palette5);
@@ -199,6 +201,25 @@ body {
   color: white;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
+
+
+@media (max-width: 768px) {
+  .dropdown-container {
+    flex-direction: column; 
+    gap: 8px; 
+    align-items: stretch; 
+  }
+
+  .dropdown {
+    width: 100%; 
+  }
+
+  .dropdown button {
+    width: 100%; 
+  }
+}
+
+
 
 /* Reference styles */
 #references {
