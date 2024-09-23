@@ -75,15 +75,15 @@ body {
   color: var(--palette2);
 }
 
-/* Recipes grid layout */
+
 .recipe-container {
-    display: grid; /* Ubah dari flex ke grid */
-    grid-template-columns: repeat(4, 1fr); /* 4 kolom permanen */
-    grid-template-rows: repeat(3, auto); /* 3 baris permanen */
-    gap: 20px; /* Atur jarak antar gambar */
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 20px;
     padding: 20px;
-    max-width: 1200px; /* Pastikan lebar maksimal */
-    margin: 0 auto; /* Untuk margin yang rata di kiri dan kanan */
+    max-width: 1200px;
+    margin: 0 auto; 
 }
 
 #recipe-grid h2 {
@@ -98,7 +98,7 @@ body {
 
 .recipe {
     text-align: center;
-    max-width: 100%; /* Sesuaikan agar fit ke dalam grid */
+    max-width: 100%; 
 }
 
 .recipe img {
@@ -115,15 +115,15 @@ body {
     margin-bottom: 20px;
 }
 
-/* Responsif untuk layar lebih kecil */
 @media (max-width: 768px) {
     .recipe-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar kecil */
-        grid-template-rows: auto; /* Baris otomatis sesuai konten */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto; 
     }
 }
 
-/* Dropdown style */
+
+/* Base style for dropdown container */
 .dropdown-container {
   display: flex;
   justify-content: space-between;
@@ -134,12 +134,12 @@ body {
   margin-top: 0px;
 }
 
-/* Style for the dropdown */
 .dropdown {
   display: inline-block;
   position: relative;
   margin: 10px;
 }
+
 
 .dropdown-content {
   display: none;
@@ -166,9 +166,11 @@ body {
   color: black;
 }
 
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 
 .dropdown button {
   background-color: var(--palette5);
@@ -199,6 +201,25 @@ body {
   color: white;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
+
+
+@media (max-width: 768px) {
+  .dropdown-container {
+    flex-direction: column; 
+    gap: 8px; 
+    align-items: stretch; 
+  }
+
+  .dropdown {
+    width: 100%; 
+  }
+
+  .dropdown button {
+    width: 100%; 
+  }
+}
+
+
 
 /* Reference styles */
 #references {
