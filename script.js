@@ -38,6 +38,7 @@ $(document).ready(function(){
     }
 
     setInterval(function() {
+        //manggil functuin show slides
         showSlides();
     }, 5000);
 
