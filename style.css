@@ -25,6 +25,26 @@ html {
 body {
   background: #ffffff;
   font-size: 1.6rem;
+  user-select: text;
+}
+
+h3 {
+  color: var(--palette4);
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+h4 {
+  color: var(--palette2);
+  text-align: justify;
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 /* Header */
@@ -33,15 +53,16 @@ header {
   top: 0; 
   width: 100%;
   padding: 3rem 4rem; 
-  background-color: hsl(345, 100%, 92%);
+  background: hsl(345, 100%, 92%, 0.8);
   display: flex;
   align-items: center;
-  justify-content: flex-end; 
+  justify-content: space-between; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 8px var(--header-shadow);
   transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 header:hover {
@@ -71,6 +92,8 @@ header:hover {
 
 .nav_bar a:hover {
   color: var(--palette3);
+  transform: translateY(-2px);
+
 }
 
 .nav_active {
@@ -214,14 +237,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .obesity {
   width: 100%;
   max-width: 200px; 
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .o_desc {
@@ -240,13 +262,13 @@ section {
   width: 100%;
   max-width: 400px;
   height: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto 2rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
+  margin: 3rem auto;
+  
+}
+
+.text-container {
+  margin-bottom: 3rem;
 }
 
 /* Diabetes Section */
@@ -269,14 +291,8 @@ section {
   flex: 2;
 }
 
-h3 {
-  color: var(--palette4);
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.3rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  line-height: 1.6;
+.text-container-2 h3 {
+  margin-top: 4rem;;
 }
 
 .desc-b {
@@ -327,8 +343,6 @@ h3 {
   position: relative;
   width: 100%;
   max-width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 2rem;
   bottom: 1.2rem;
 }
@@ -337,8 +351,6 @@ h3 {
   position: relative;
   width: 100%;
   max-width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 2rem;
   bottom: 1rem;
 }
@@ -371,8 +383,7 @@ h3 {
 .chicken-img {
   position: relative;
   max-width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
   height: auto;
   top: 0.8rem;
 }
@@ -380,15 +391,25 @@ h3 {
 .box {
   border: 1px solid;
   border-color: var(--palette2);
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 10px;
   margin-left: 2rem;
   background-color: #f9f9f9; 
   margin-bottom: 3rem;
 }
 
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 2px var(--palette3), 0 0 5px var(--palette3), 0 0 5px var(--palette3);
+}
+
 .kandungan ul {
   padding-left: 2.5rem;
+}
+
+.todo ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* exercise */
@@ -402,34 +423,29 @@ h3 {
   max-width: 150px;
   height: auto;
   width: 100%;
-  margin-bottom: 3rem;
   margin-left: 1rem;
 }
 
 /* others */
-h4 {
-  color: var(--palette2);
-  text-align: justify;
-  font-weight: 300;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
 .text-container-5 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 
 .box1 {
   border: 1px solid;
   border-color: var(--palette2);
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 10px;
   margin-left: 2rem;
   background-color: #f9f9f9; 
   margin-bottom: 3rem;
+}
+
+.box1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 2px var(--palette3), 0 0 5px var(--palette3), 0 0 5px var(--palette3);
 }
 
 /*story*/
@@ -447,8 +463,6 @@ h4 {
   width: 100%;
   max-width: 400px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -474,7 +488,7 @@ button {
   margin-bottom: 3rem;
   cursor: pointer; 
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s, transform 0.3s; 
   
 }
@@ -483,6 +497,42 @@ button:hover {
   background-color: var(--palette5); 
   transform: scale(1.05); 
 }
+
+/* Image */
+.obesity:hover, .heart_attack:hover, .diabetes:hover, .survivor:hover,
+.diabetes-img:hover, .diabetes-img1:hover, .chicken-img:hover, .exercise:hover
+{
+  transform: scale(1.1);
+}
+
+.obesity, .heart_attack, .diabetes, .survivor,
+.diabetes-img, .diabetes-img1, .chicken-img, .exercise
+{
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(0, 3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.in-view {
+  animation: fade 0.3s 0.3s both;
+}
+
+.not-in-view {
+  opacity: 0;
+}
+
+
 
 /*Reference*/
 #references {
@@ -514,6 +564,10 @@ button:hover {
 .icon {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.icon i:hover {
+  transform: scale(1.3) translateY(-1px);
 }
 
 .fa-instagram,
@@ -591,6 +645,10 @@ ol li {
     margin-right: 0;
   }
 
+  .text-container-5 {
+    grid-template-columns: 1fr;
+  }
+
   .title {
     font-size: 2.4rem;
   }
@@ -616,14 +674,6 @@ ol li {
     margin: 0 auto; 
   }
 
-  .obesity {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    display: block; 
-    margin: 0 auto; 
-  }
-
    .diabetes-img1 {
     margin-top: 3rem;
    }
@@ -639,7 +689,7 @@ ol li {
 
 @media (max-width: 768px) {
   .header {
-    padding: 1rem 4%;
+    padding: 2rem 4%;
   }
 
   .logo img {
@@ -667,8 +717,14 @@ ol li {
       display: block; 
   }
 
-  .text-container-1, .text-container-2, .text-container-4 {
+  .text-container-1, .text-container-2{
     flex-direction: column;
+  }
+
+  .text-container-4 {
+    grid-template-columns: 1fr;
+    place-items: center;
+    
   }
 
   .text-container-5 {
@@ -684,20 +740,17 @@ ol li {
     flex-direction: column;
   }
 
-  .exercise {
-    max-width: 120px;
-  }
-
   .diabetes-img1 {
     margin-top: 6rem;
    }
 
-   .diabetes-img, .exercise {
+   .diabetes-img {
     margin-top: 7rem;
    }
 
-   .chicken-img {
+   .chicken-img, .exercise, .obesity {
     margin-bottom: 2rem;
+    margin-top: 0;
     max-width: 180px;
     height: auto;
    }
@@ -734,7 +787,6 @@ ol li {
       display: block; 
   }
 
-
   .text {
     font-size: 1.4rem;
   }
@@ -766,6 +818,10 @@ ol li {
     bottom: 0;
     max-width: 100%;
   }
+
+  .todo ul {
+    grid-template-columns: 1fr;
+}
 
   .title {
     font-size: 1.8rem;

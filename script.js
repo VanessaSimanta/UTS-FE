@@ -144,4 +144,31 @@ $(document).ready(function(){
         form.on("submit", onFormSubmit);
         form.on("reset", onFormReset);
       });
+
+      //SCROLL ANIMATION
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.target.className != 'slider' && entry.target.className != 'search-container' && entry.target.className != 'icon'){
+              if(entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                entry.target.classList.remove("not-in-view");
+              }
+              else {
+                entry.target.classList.remove("in-view");
+                entry.target.classList.add("not-in-view");
+              }
+            }
+          })
+        },
+        {
+          rootMargin: '0px',
+          threshold: [0, 0.1, 1],
+        }
+      )
+
+      const tag = document.querySelectorAll(".title, div");
+      tag.forEach((tag) => {
+        observer.observe(tag)
+      })
 });
