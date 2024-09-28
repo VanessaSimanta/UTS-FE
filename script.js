@@ -75,6 +75,7 @@ $(document).ready(function(){
         "sleep": "#sleep",
         "stress": "#stress",
         "smoke": "#smoking",
+        "simple exercise": "#exercises",
     };
 
     $(".search-container input[type='text']").on('keypress', function(e) {
@@ -92,58 +93,87 @@ $(document).ready(function(){
             }
         }
     });
+    
+    // back to top
+    $(".back-to-top").click(function() {
+      console.log("Back-to-top button clicked!");
+      const headerHeight = 150;
+      switch (page) {
+          case "index.html":
+              $('html, body').animate({
+                  scrollTop: $("#slider").offset().top - headerHeight
+              }, 500);  
+              break;
+          case "exercise.html":
+              $('html, body').animate({
+                  scrollTop: $("#tips").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "recipes.html":
+              $('html, body').animate({
+                  scrollTop: $("#recipe-index").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "bmi.html":
+              $('html, body').animate({
+                  scrollTop: $(".bmi-container").offset().top - headerHeight
+              }, 500);  
+              break;
+          default:
+              console.log("No matching page");
+      }
+    });
 
+  
     //BMI Calculator
-    $(document).ready(function() {
-        const bmiText = $("#bmi");
-        const descText = $("#desc");
-        const form = $("form");
-      
-        // Reset function
-        function onFormReset() {
-          bmiText.text(0);
-          bmiText.removeClass(); 
-          descText.html("N/A");
+      const bmiText = $("#bmi");
+      const descText = $("#desc");
+      const form = $("form");
+    
+      // Reset function
+      function onFormReset() {
+        bmiText.text(0);
+        bmiText.removeClass(); 
+        descText.html("N/A");
+      }
+    
+      // Submit function
+      function onFormSubmit(e) {
+        e.preventDefault();
+    
+        const weight = parseFloat($("#weight").val());
+        const height = parseFloat($("#height").val());
+    
+        if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+          alert("Please enter a valid weight and height");
+          return;
         }
-      
-        // Submit function
-        function onFormSubmit(e) {
-          e.preventDefault();
-      
-          const weight = parseFloat($("#weight").val());
-          const height = parseFloat($("#height").val());
-      
-          if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-            alert("Please enter a valid weight and height");
-            return;
-          }
-      
-          const heightInMeters = height / 100; 
-          //rumus bmi
-          const bmi = weight / Math.pow(heightInMeters, 2);
-          const desc = interpretBMI(bmi);
-      
-          bmiText.text(bmi.toFixed(2));
-          bmiText.addClass(desc); 
-          descText.html(`You are <strong>${desc}</strong>`);
+    
+        const heightInMeters = height / 100; 
+        //rumus bmi
+        const bmi = weight / Math.pow(heightInMeters, 2);
+        const desc = interpretBMI(bmi);
+    
+        bmiText.text(bmi.toFixed(2));
+        bmiText.addClass(desc); 
+        descText.html(`You are <strong>${desc}</strong>`);
+      }
+    
+      function interpretBMI(bmi) {
+        if (bmi < 18.5) {
+          return "underweight";
+        } else if (bmi < 25) {
+          return "healthy";
+        } else if (bmi < 30) {
+          return "overweight";
+        } else {
+          return "obese";
         }
+      }
       
-        function interpretBMI(bmi) {
-          if (bmi < 18.5) {
-            return "underweight";
-          } else if (bmi < 25) {
-            return "healthy";
-          } else if (bmi < 30) {
-            return "overweight";
-          } else {
-            return "obese";
-          }
-        }
-      
-        // Event listeners
-        form.on("submit", onFormSubmit);
-        form.on("reset", onFormReset);
-      });
+      // Event listeners
+      form.on("submit", onFormSubmit);
+      form.on("reset", onFormReset);
 
       //SCROLL ANIMATION
       const observer = new IntersectionObserver(

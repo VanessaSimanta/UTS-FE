@@ -20,7 +20,10 @@ html {
   font-size: 60%;
   overflow-x: hidden;
   overflow-y: scroll;
+  overflow: auto;  
+  height: auto;    
 }
+
 
 body {
   background: #ffffff;
@@ -534,46 +537,48 @@ button:hover {
 
 
 
-/*Reference*/
-#references {
+/*reference*/
+.reference {
   padding: 2rem 10%;
   background-color: #f9f9f9;
 }
 
-#references ul {
+.reference-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.reference ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr; 
   gap: 1rem; 
 }
 
-#references li {
+.reference li {
   margin-bottom: 0.5rem;
 }
 
-#references a {
+.reference a {
   text-decoration: none;
   color: var(--palette3);
   transition: color 0.2s ease-in;
 }
 
-#references a:hover {
+.reference a:hover {
   color: var(--palette2);
 }
 
 .icon {
+  font-size: 20px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .icon i:hover {
   transform: scale(1.3) translateY(-1px);
-}
-
-.fa-instagram,
-.fa-envelope,
-.fa-twitter {
-  margin-left: 1rem;
 }
 
 /* Back to Top */
@@ -827,7 +832,7 @@ ol li {
     font-size: 1.8rem;
   }
 
-  #references ul {
+  .reference ul {
     grid-template-columns: 1fr;
   }
 
