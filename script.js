@@ -203,16 +203,6 @@ $(document).ready(function(){
       })
 });
 
-$(document).ready(function() {
-  // JS UNTUK NAV BAR
-  var page = window.location.pathname.split("/").pop();
-  $(".nav_bar a").each(function() {
-      var link = $(this).attr("href");
-      if (link === page) {
-          $(".nav_bar a").removeClass("nav_active");
-          $(this).addClass("nav_active");
-      }
-  });
 
   // Sorting Button Functionality
   $(".sort-btn").click(function() {
@@ -224,7 +214,4 @@ $(document).ready(function() {
           // Implement sorting logic for 'Simple Workout'
           console.log("Sorting by Simple Workout");
       }
-  });
-
-  // Other existing scripts remain the same...
 });
