@@ -202,3 +202,29 @@ $(document).ready(function(){
         observer.observe(tag)
       })
 });
+
+$(document).ready(function() {
+  // JS UNTUK NAV BAR
+  var page = window.location.pathname.split("/").pop();
+  $(".nav_bar a").each(function() {
+      var link = $(this).attr("href");
+      if (link === page) {
+          $(".nav_bar a").removeClass("nav_active");
+          $(this).addClass("nav_active");
+      }
+  });
+
+  // Sorting Button Functionality
+  $(".sort-btn").click(function() {
+      let sortType = $(this).data('sort');
+      if (sortType === 'default') {
+          // Implement sorting logic for 'Workout at Home'
+          console.log("Sorting by Workout at Home");
+      } else if (sortType === 'name') {
+          // Implement sorting logic for 'Simple Workout'
+          console.log("Sorting by Simple Workout");
+      }
+  });
+
+  // Other existing scripts remain the same...
+});
