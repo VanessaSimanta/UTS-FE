@@ -226,5 +226,6 @@ $(document).ready(function() {
       }
   });
 
+  
   // Other existing scripts remain the same...
 });
