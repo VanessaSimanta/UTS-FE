@@ -116,11 +116,13 @@ html, body {
 }
 
 #exerciseList img {
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 1.5rem;
 }
+
 
 .exercise-name {
     font-size: 2rem;
