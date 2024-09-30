@@ -5,7 +5,13 @@ $(document).ready(function(){
     //function buat iterasi ke tiap link di navbar
     $(".nav_bar a").each(function(){
         var link = $(this).attr("href");
-       //cek apakah sama dengan page yang sekarang di select
+        var recipes = $('.nav_bar a[href="recipes.html"]');
+      //untuk navbar recepies
+        if(page === "breakfast.html" || page === "lunch.html" ||   page === "dinner.html" ||  page === "snacks.html" ||  page === "gluten.html" ||  page === "salad.html") {
+          $(".nav_bar a").removeClass("nav_active")
+            $(recipes).addClass("nav_active");
+        }
+        //cek apakah sama dengan page yang sekarang di select
         if(link === page){
             $(".nav_bar a").removeClass("nav_active")
             $(this).addClass("nav_active");
