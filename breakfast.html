@@ -8,6 +8,7 @@
     <title>Health n Love</title>
     <link rel="stylesheet" href="style_recipe.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,149 +36,38 @@
         </nav>
     </header>
 
-    <!-- Category (nanto mau dibuat button di js, tapi blm)  -->
-<section id="recipe-index">
-    <h2>Try Our Recipes</h2>
-    <div class="recipe-categories">
-        <div class="category">
-            <a href="breakfast.html">
-                <img src="/image/cat1.jpg" alt="Breakfast">
-            </a>
-            <p>BREAKFAST</p>
+    <section class="page-description">
+        <div class="container">
+            <div class="title">
+                <h1>Breakfast</h1>
+            </div>
+            <div class="description">
+                <p>Start your morning off with these quick, sweet and savory healthy breakfast and brunch recipes that are perfect 
+                    for easy weekday breakfasts, make-ahead ideas, and delicious brunch spreads!</p>
+            </div>
         </div>
-        <div class="category">
-            <a href="lunch.html">
-                <img src="/image/cat2.jpg" alt="Lunch">
-            </a>
-            <p>LUNCH</p>
-        </div>
-        <div class="category">
-            <a href="dinner.html">
-                <img src="/image/cat3.jpg" alt="Dinner">
-            </a>
-            <p>DINNER</p>
-        </div>
-        <div class="category">
-            <a href="snacks.html">
-                <img src="/image/cat4.jpg" alt="Snacks">
-            </a>
-            <p>SNACKS</p>
-        </div>
-        <div class="category">
-            <a href="gluten.html">
-                <img src="/image/cat5.jpg" alt="Gluten Free">
-            </a>
-            <p>GLUTEN FREE</p>
-        </div>
-        <div class="category">
-            <a href="salad.html">
-                <img src="/image/cat6.jpg" alt="Salads">
-            </a>
-            <p>SALADS</p>
-        </div>
-    </div>
-</section>
+    </section>
     
-<!-- Dropdowns BY -->
-<div class="dropdown-container">
-    <!-- By Course Dropdown -->
-    <div class="dropdown">
-        <button>BY COURSE <i class="fas fa-angle-down"></i></button>
-        <div class="dropdown-content">
-            <a href="#">BREAKFAST & LUNCH</a>
-            <a href="#">DINNER</a>
-            <a href="#">SNACKS</a>
-        </div>
-    </div>
-
-    <!-- By Calories Dropdown -->
-    <div class="dropdown">
-        <button>BY CALORIES <i class="fas fa-angle-down"></i></button>
-        <div class="dropdown-content">
-            <a href="#">LOW CALORIES</a>
-            <a href="#">HIGH CALORIES</a>
-        </div>
-    </div>
-
-    <!-- By Diet Dropdown -->
-    <div class="dropdown">
-        <button>BY DIET <i class="fas fa-angle-down"></i></button>
-        <div class="dropdown-content">
-            <a href="#">CLEAN EATING</a>
-            <a href="#">GLUTEN FREE</a>
-            <a href="#">SALADS</a>
-        </div>
-    </div>
-</div>
-
-
+   
 <!-- Recipe Grid -->
 <section id="recipe-grid">
     <h2>Our Popular Recipes</h2>
     <div class="recipe-container">
         <div class="recipe">
-            <a href="#"><img src="/image/pop1.jpg" alt="Italian Pasta Salad"></a>
-            <p>Italian Pasta Salad</p>
+            <a href="#"><img src="/image/breakfast1.jpg" alt="Pumpkin Bread"></a>
+            <p>Pumpkin Bread</p>
         </div>
         <div class="recipe">
-            <a href="#"><img src="/image/pop2.jpg" alt="Italian Dressing"></a>
-            <p>Italian Dressing</p>
+            <a href="#"><img src="/image/breakfast2.jpg" alt="Egg Casserole"></a>
+            <p>Egg Casserole</p>
         </div>
         <div class="recipe">
-            <a href="#"><img src="/image/pop3.jpg" alt="Herb Grilled Chicken"></a>
-            <p>Herb Grilled Chicken</p>
+            <a href="#"><img src="/image/breakfast3.jpg" alt="Banana Bread"></a>
+            <p>Banana Bread</p>
         </div>
         <div class="recipe">
-            <a href="#"><img src="/image/pop4.jpeg" alt="Chicken Tacos"></a>
-            <p>Chicken Tacos</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop5.jpg" alt="Roasted Pasta Salad"></a>
-            <p>Roasted Pasta Salad</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop6.jpg" alt="Chicken Caesar Salad"></a>
-            <p>Chicken Caesar Salad</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop7.jpg" alt="Homemade Croutons"></a>
-            <p>Homemade Croutons</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop8.jpg" alt="Caesar Dressing"></a>
-            <p>Caesar Dressing</p>
-        </div>
-         <div class="recipe">
-             <a href="#"><img src="/image/pop9.jpg" alt="Peanut Butter Bars"></a>
-             <p>Peanut Butter Bars</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop10.jpg" alt="Shrimp Pan Fajitas"></a>
-            <p>Shrimp Pan Fajitas</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop11.jpg" alt="Chicken Salad"></a>
-            <p>Chicken Salad</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop12.jpg" alt="Lemon Garlic Shrimp"></a>
-            <p>Lemon Garlic Shrimp</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop1.jpg" alt="Italian Pasta Salad"></a>
-            <p>Italian Pasta Salad</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop2.jpg" alt="Italian Dressing"></a>
-            <p>Italian Dressing</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop3.jpg" alt="Herb Grilled Chicken"></a>
-            <p>Herb Grilled Chicken</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop4.jpeg" alt="Chicken Tacos"></a>
-            <p>Chicken Tacos</p>
+            <a href="#"><img src="/image/breakfast4.jpg" alt="Berries Smoothie Bowl"></a>
+            <p>Berries Smoothie Bowl</p>
         </div>
         <div class="recipe">
             <a href="#"><img src="/image/pop5.jpg" alt="Roasted Pasta Salad"></a>
@@ -194,22 +84,6 @@
         <div class="recipe">
             <a href="#"><img src="/image/pop8.jpg" alt="Caesar Dressing"></a>
             <p>Caesar Dressing</p>
-        </div>
-         <div class="recipe">
-             <a href="#"><img src="/image/pop9.jpg" alt="Peanut Butter Bars"></a>
-             <p>Peanut Butter Bars</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop10.jpg" alt="Shrimp Pan Fajitas"></a>
-            <p>Shrimp Pan Fajitas</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop11.jpg" alt="Chicken Salad"></a>
-            <p>Chicken Salad</p>
-        </div>
-        <div class="recipe">
-            <a href="#"><img src="/image/pop12.jpg" alt="Lemon Garlic Shrimp"></a>
-            <p>Lemon Garlic Shrimp</p>
         </div>
     </div>
 </section>
