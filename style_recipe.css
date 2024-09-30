@@ -127,11 +127,11 @@ body {
 /* Base style for dropdown container */
 .dropdown-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 2px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px; 
+  margin: 0 auto;     
   margin-top: 0px;
 }
 
