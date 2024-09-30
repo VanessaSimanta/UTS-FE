@@ -106,11 +106,6 @@ h1 {
     background-color: var(--palette3); 
 }
 
-#references {
-    width: 100%;
-    padding: 2rem 10%;
-}
-
 .output {
     text-align: center;
     background-color: var(--palette5);
@@ -155,6 +150,10 @@ h1 {
 
 .obese {
     color: var(--obese);
+}
+
+footer {
+    width: 100%;
 }
 
 /* Responsive */
