@@ -46,12 +46,56 @@ html, body {
     transition: all 0.3s ease;
 }
 
-/* Exercise Routine Section */
-#exercises {
+/* Exercise Seniors */
+#exercises-seniors {
     padding: 2rem 10%;
 }
 
-#exercises .title {
+#exercises-seniors .title {
+    margin-bottom: 2rem; 
+}
+
+.exercise-list {
+    margin-bottom: 2rem;
+    margin-top: 2rem; 
+    text-align: center;
+}
+
+.exercise-list label {
+    font-size: 1.8rem;
+    color: var(--palette2);
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+#sortExercise {
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--palette4);
+    background-color: var(--palette5);
+    color: var(--palette2);
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#sortExercise:hover {
+    background-color: var(--palette1);
+    color: #fff;
+    border-color: var(--palette3);
+}
+
+#sortExercise:focus {
+    box-shadow: 0 0 5px var(--palette3);
+}
+
+/* Exercise Routine */
+#exercises-routines {
+    padding: 2rem 10%;
+}
+
+#exercises-routines .title {
     margin-bottom: 2rem; 
 }
 
