@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; 
+    line-height: 1.6;
+}
+
+/* Container for the whole recipe section */
+.recipe-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 900px;
+    max-width: 1200px; /* Set maximum width for the card */
+    margin-left: 120px; /* Center align the card */
+}
+
+/* Recipe header section */
+.recipe-header {
+    display: flex; /* Keep flex display for horizontal alignment */
+    background-color: #ffe6cc; /* Background color */
+    padding: 20px;
+    border-bottom: 2px solid #ff6600; /* Border between header and other sections */
+    border-radius: 8px 8px 0 0;
+}
+
+/* Ensure h1 and paragraph are styled correctly */
+.recipe-header h1 {
+    font-size: 2.5rem; /* Font size for the title */
+    color: #ff6600;
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove margins */
+}
+
+.recipe-header p {
+    font-size: 1.2rem; /* Font size for description */
+    color: #333;
+    text-align: left;
+    margin-top: 120px;
+    margin-left: -200px; /* Align text to the left */
+     /* Add top margin for spacing */
+}
+
+/* Recipe meta information - Prep time, cook time, etc. */
+.recipe-meta p {
+    font-size: 1rem; /* Font size for meta information */
+    color: #333;
+    margin-top: 200px;
+    margin-bottom: -180px; /* Spacing between meta info */
+    margin-left: -500px;
+}
+
+/* Image section on the right */
+.recipe-image {
+    flex-shrink: 0; /* Ensure the image stays its size */
+    max-width: 35%; /* Set the width of the image container */
+    margin-left: 20px; /* Add space between text and image */
+}
+
+/* Change the layout for the header text */
+.recipe-header .header-text {
+    display: flex; /* Keep the text section as flex */
+    flex-direction: column; /* Stack header elements vertically */
+}
+
+/* Style for image */
+.recipe-image img {
+    width: 100%; /* Make the image responsive */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .recipe-header {
+        flex-direction: column; /* Stack text and image vertically on small screens */
+    }
+
+    .recipe-text, .recipe-image {
+        max-width: 100%; /* Make both sections full-width */
+        text-align: center; /* Center the text on small screens */
+    }
+
+    .recipe-image {
+        margin-top: 20px; /* Add space between text and image */
+    }
+}
+
+
+/* Ingredients section */
+.ingredients-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for Ingredients and Instructions section headers */
+.ingredients-container h2, 
+.instructions-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling for the container to look boxed */
+.recipe-container {
+    padding: 20px;
+}
+
+
+.instructions-list {
+    list-style: none; /* Menghilangkan angka default dari list */
+    padding: 0;
+    counter-reset: step-counter;
+}
+
+.instructions-list li {
+    position: relative;
+    padding-left: 40px; /* Memberi ruang untuk bulatan */
+    margin-bottom: 20px;
+    list-style-type: none; /* Menghindari penomoran default */
+}
+
+.instructions-list li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter); /* Menampilkan angka dalam bulatan */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ff6600;
+    color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+
+
+/* Nutrition Section */
+.nutrition-container {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.nutrition-container p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.nutrition-container small {
+    font-size: 0.75rem;
+    color: #555;
+}
