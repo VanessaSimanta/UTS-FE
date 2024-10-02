@@ -220,7 +220,7 @@ $(document).ready(function(){
           // Implement sorting logic for 'Simple Workout'
           console.log("Sorting by Simple Workout");
       }
-<<<<<<< Updated upstream
+
 });
 
   //Sorting untuk exercises
@@ -232,11 +232,10 @@ $(document).ready(function(){
     $("#exercises-seniors").hide();
     $("#exercises-routines").show();
   });
-=======
-    
-    });
-    
-    $(document).ready(function() {
+
+
+  
+  $(document).ready(function() {
       // Ketika checkbox diklik
       $('input[type="checkbox"]').click(function() {
           // Jika checkbox dicentang
@@ -249,4 +248,4 @@ $(document).ready(function(){
           }
       });
 });
->>>>>>> Stashed changes
+
