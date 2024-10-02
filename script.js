@@ -221,3 +221,13 @@ $(document).ready(function(){
           console.log("Sorting by Simple Workout");
       }
 });
+
+  //Sorting untuk exercises
+  $(".sorting").click(function() {
+    $("#exercises-routines").hide();
+    $("#exercises-seniors").show();
+  });
+  $(".sorting1").click(function() {
+    $("#exercises-seniors").hide();
+    $("#exercises-routines").show();
+  });
