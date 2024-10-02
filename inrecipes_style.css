@@ -6,51 +6,64 @@ body {
     line-height: 1.6;
 }
 
+:root {
+    --palette1: #FCB9B2;
+    --palette2: #461220;
+    --palette3: #B23A48;
+    --palette4: #8C2F39;
+    --palette5: #FED0BB;
+    --header-shadow: rgba(0, 0, 0, 0.15);
+  }
+
 /* Container for the whole recipe section */
 .recipe-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: white;
+    border: 1px solid var(--palette1);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 900px;
+    width: 780px;
     max-width: 1200px; /* Set maximum width for the card */
-    margin-left: 120px; /* Center align the card */
+    margin-left: 200px; /* Center align the card */
 }
 
 /* Recipe header section */
 .recipe-header {
     display: flex; /* Keep flex display for horizontal alignment */
-    background-color: #ffe6cc; /* Background color */
+    background-color: var(--palette5); /* Background color */
     padding: 20px;
-    border-bottom: 2px solid #ff6600; /* Border between header and other sections */
+    border-bottom: 2px solid var(--palette3); /* Border between header and other sections */
     border-radius: 8px 8px 0 0;
 }
 
 /* Ensure h1 and paragraph are styled correctly */
 .recipe-header h1 {
-    font-size: 2.5rem; /* Font size for the title */
-    color: #ff6600;
+    font-size: 4rem; /* Font size for the title */
+    color: var(--palette4);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: var(--palette3)  0px 0px 2px;
     text-align: left; /* Align text to the left */
-    margin: 0; /* Remove margins */
+    
 }
 
 .recipe-header p {
-    font-size: 1.2rem; /* Font size for description */
+    font-size: 2rem; /* Font size for description */
     color: #333;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: left;
     margin-top: 120px;
-    margin-left: -200px; /* Align text to the left */
-     /* Add top margin for spacing */
+    margin-bottom: 100px;
+    margin-left: -190px; /* Align text to the left */
 }
 
 /* Recipe meta information - Prep time, cook time, etc. */
 .recipe-meta p {
-    font-size: 1rem; /* Font size for meta information */
-    color: #333;
+    font-size: 2rem; /* Font size for meta information */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4d3535;
     margin-top: 200px;
-    margin-bottom: -180px; /* Spacing between meta info */
-    margin-left: -500px;
+    margin-bottom: -200px; /* Spacing between meta info */
+    margin-left: -430px;
 }
 
 /* Image section on the right */
@@ -70,7 +83,28 @@ body {
 .recipe-image img {
     width: 100%; /* Make the image responsive */
     border-radius: 8px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(145, 25, 25, 0.81); /* Tambahkan bayangan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tambahkan transisi untuk transformasi dan bayangan */
 }
+
+.recipe-image img:hover {
+    transform: scale(1.05); /* Perbesar gambar saat kursor diarahkan */
+    box-shadow: 0 8px 16px rgba(204, 52, 52, 0.379); /* Tambahkan bayangan yang lebih besar saat hover */
+}
+
+
+.recipe-image img {
+    width: 100%; /* Make the image responsive */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Tambahkan transisi untuk transformasi, opasitas, dan bayangan */
+}
+
+.recipe-image img:hover {
+    transform: scale(1.05); /* Perbesar gambar saat kursor diarahkan */
+    opacity: 0.9; /* Ubah opasitas sedikit saat hover */
+    box-shadow: 0 4px 20px rgba(147, 54, 54, 0.921); /* Tambahkan bayangan saat hover */
+}
+
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
@@ -86,6 +120,7 @@ body {
     .recipe-image {
         margin-top: 20px; /* Add space between text and image */
     }
+
 }
 
 
@@ -95,6 +130,13 @@ body {
     padding: 0;
 }
 
+.ingredients-list h3{
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    color: #333;
+}
+
 .ingredients-list li {
     margin: 10px 0;
     display: flex;
@@ -102,9 +144,13 @@ body {
 }
 
 /* Style for Ingredients and Instructions section headers */
+
+
 .ingredients-container h2, 
 .instructions-container h2 {
-    font-size: 1.5rem;
+    margin-top: 20px;
+    font-size: 3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     color: #333;
     margin-bottom: 10px;
 }
@@ -134,7 +180,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #ff6600;
+    background-color: var(--palette3);
     color: white;
     width: 25px;
     height: 25px;
@@ -144,23 +190,39 @@ body {
     line-height: 25px;
 }
 
+input[type="checkbox"].checked {
+    accent-color: var(--palette3); /* Mengubah warna centang menjadi orange */
+}
 
+input[type="checkbox"] {
+    width: 20px; /* Atur lebar checkbox */
+    height: 15px; /* Atur tinggi checkbox */
+    transform: scale(1.5); /* Membesarkan tampilan checkbox */
+    margin-right: 10px; /* Memberikan jarak antara checkbox dan teks */
+}
 
 /* Nutrition Section */
 .nutrition-container {
     margin-top: 30px;
     padding: 15px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
+    background-color: #FED0BB;
+    border: 1px solid var(--palette4);
     border-radius: 5px;
 }
 
-.nutrition-container p {
+.nutrition-container h2 {
+    color: #461220;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 2.2rem;
+}
+
+.nutrition-container p {
+    color: #461220;
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 .nutrition-container small {
-    font-size: 0.75rem;
-    color: #555;
+    font-size: 1.5rem;
+    color: #643636;
 }

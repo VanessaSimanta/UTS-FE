@@ -236,16 +236,30 @@ $(document).ready(function(){
 
   
   $(document).ready(function() {
-      // Ketika checkbox diklik
-      $('input[type="checkbox"]').click(function() {
-          // Jika checkbox dicentang
-          if ($(this).is(':checked')) {
-              // Tambahkan garis coret pada label
-              $(this).next('label').css('text-decoration', 'line-through');
-          } else {
-              // Jika checkbox tidak dicentang, hilangkan garis coret
-              $(this).next('label').css('text-decoration', 'none');
-          }
-      });
+    // Ketika checkbox diklik
+    $('input[type="checkbox"]').click(function() {
+        // Jika checkbox dicentang
+        if ($(this).is(':checked')) {
+            // Tambahkan garis coret pada label
+            $(this).next('label').css({
+                'text-decoration': 'line-through',
+                'margin-left': '10px' // Memberikan jarak antara checkbox dan teks
+            });
+            // Tambahkan kelas 'checked' pada checkbox untuk mengubah gaya visual
+            $(this).addClass('checked');
+        } else {
+            // Jika checkbox tidak dicentang, hilangkan garis coret
+            $(this).next('label').css({
+                'text-decoration': 'none',
+                'margin-left': '10px' // Tetap memberikan jarak saat checkbox tidak dicentang
+            });
+            // Hapus kelas 'checked' jika tidak dicentang
+            $(this).removeClass('checked');
+        }
+    });
+
+    // Tambahkan jarak default pada semua label di awal
+    $('input[type="checkbox"]').next('label').css('margin-left', '8px');
 });
+
 
