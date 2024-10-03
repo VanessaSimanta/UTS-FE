@@ -26,9 +26,9 @@
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
-            <a href="index.html" class="nav_active">Home</a>
+            <a href="index.html">Home</a>
             <a href="exercise.html">Exercise</a>
-            <a href="recipes.html">Recipes</a>
+            <a href="recipes.html" class="nav_active">Recipes</a>
             <a href="bmi.html">BMI Calculator</a>
             <div class="search-container">
                 <i class="fas fa-search"></i>
@@ -42,7 +42,9 @@
             <div class="recipe-card"> <!-- Menambahkan container untuk seluruh section -->
                 <div class="recipe-header">
                     <h1>Pumpkin Bread</h1>
-                    <p>The BEST Healthy Pumpkin Bread recipe that is moist, loaded with pumpkin flavor and made without any butter or refined sugar!</p>
+                    <div class="recipe-desc">
+                        <p>The BEST Healthy Pumpkin Bread recipe that is moist, loaded with pumpkin flavor and made without any butter or refined sugar!</p>
+                    </div>
                     <div class="recipe-meta">
                         <p><strong>Prep Time:</strong> 15 mins</p>
                         <p><strong>Cook Time:</strong> 1 hr</p>
@@ -57,6 +59,7 @@
         <!-- Ingredients Section -->
             <div class="ingredients-container">
                  <h2>Ingredients</h2>
+                    <h3>Base :</h3>
                     <ul class="ingredients-list">
                         <li><input type="checkbox" id="ingredient1"> <label for="ingredient1">1 cup whole wheat pastry flour</label></li>
                         <li><input type="checkbox" id="ingredient2"> <label for="ingredient2">1/2 cup all-purpose flour</label></li>
@@ -72,7 +75,9 @@
                         <li><input type="checkbox" id="ingredient12"> <label for="ingredient12">2 tablespoons applesauce</label></li>
                         <li><input type="checkbox" id="ingredient13"> <label for="ingredient13">1/4 cup coconut oil, melted</label></li>
                         <li><input type="checkbox" id="ingredient14"> <label for="ingredient14">1 teaspoon vanilla extract</label></li>
+                    </ul>
                 <h3>Maple Cream :</h3>
+                <ul class="ingredients-list">
                         <li><input type="checkbox" id="ingredient9"> <label for="ingredient9">1 cup pure pumpkin</label></li>
                         <li><input type="checkbox" id="ingredient10"> <label for="ingredient10">1/2 cup maple syrup</label></li>
                         <li><input type="checkbox" id="ingredient11"> <label for="ingredient11">1/4 cup cane sugar</label></li>
