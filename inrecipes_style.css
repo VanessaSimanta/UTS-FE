@@ -15,6 +15,97 @@ body {
     --header-shadow: rgba(0, 0, 0, 0.15);
   }
 
+ 
+#why-love {
+    padding: 4rem 10%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    background-color: #ffffff; /* Soft background to differentiate section */
+}
+
+#why-love .title {
+    font-size: 3.5rem;
+    color: var(--palette4);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#why-love ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+#why-love ul li {
+    font-size: 1.8rem;
+    color: var(--palette2);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    padding-left: 0.5rem;
+    position: relative;
+}
+
+#why-love ul li::before {
+    color: var(--palette3);
+    font-weight: bold;
+    position: absolute;
+    left: -2rem;
+}
+
+#why-love ul li:hover {
+    color: var(--palette3);
+    font-weight: bold;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Tips Section */
+#tips {
+    padding: 4rem 10%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    background-color: #ffffff; /* Soft background color for tips */
+}
+
+#tips .title {
+    font-size: 3.5rem;
+    color: var(--palette4);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#tips ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+#tips ul li {
+    font-size: 1.8rem;
+    color: var(--palette2);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    padding-left: 0.5rem;
+    position: relative;
+}
+
+#tips ul li::before {
+    color: var(--palette3);
+    font-weight: bold;
+    position: absolute;
+    left: -2rem;
+}
+
+#tips ul li:hover {
+    color: var(--palette3);
+    font-weight: bold;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+
 /* Container for the whole recipe section */
 .recipe-card {
     background-color: white;
@@ -60,7 +151,7 @@ body {
 
 /* Recipe meta information - Prep time, cook time, etc. */
 .recipe-meta p {
-    font-size: 2rem; /* Font size for meta information */
+    font-size: 1.7rem; /* Font size for meta information */
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #4d3535;
     margin-top: 200px;
@@ -133,7 +224,7 @@ body {
 /* Ingredients section */
 .ingredients-list {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.4fr;
     list-style-type: none;
     padding: 1rem;
     align-items: left;
@@ -175,13 +266,14 @@ body {
 .instructions-list {
     list-style: none; /* Menghilangkan angka default dari list */
     padding: 0;
+    margin-left: 10px;
     counter-reset: step-counter;
 }
 
 .instructions-list li {
     position: relative;
     padding-left: 40px; /* Memberi ruang untuk bulatan */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     list-style-type: none; /* Menghindari penomoran default */
 }
 
