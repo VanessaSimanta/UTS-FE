@@ -232,7 +232,11 @@ $(document).ready(function(){
     $("#exercises-seniors").hide();
     $("#exercises-routines").show();
   });
-
+// Menampilkan semua exercises
+$(".sorting2").click(function() {
+  $("#exercises-routines").show();
+  $("#exercises-seniors").show();
+});
 
   
   $(document).ready(function() {
