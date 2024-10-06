@@ -238,7 +238,7 @@ $(".sorting2").click(function() {
   $("#exercises-seniors").show();
 });
 
- //fungsi untuk checbox ingredients recipes 
+ //fungsi js untuk checbox ingredients recipes 
   $(document).ready(function() {
     $('input[type="checkbox"]').click(function() {
         if ($(this).is(':checked')) {
@@ -250,14 +250,32 @@ $(".sorting2").click(function() {
         } else {
             $(this).next('label').css({
                 'text-decoration': 'none',
-                'margin-left': '10px' // Tetap memberikan jarak saat checkbox tidak dicentang
+                'margin-left': '10px' 
             });
             $(this).removeClass('checked');
         }
     });
-
     // Tambahkan jarak default pada semua label di awal
     $('input[type="checkbox"]').next('label').css('margin-left', '8px');
 });
+
+//JS untuk filtering calories in recipes
+$(document).ready(function() {
+  $('.recipe').show();
+  $('.calorie-button').click(function() {
+      var filter = $(this).data('filter');
+      
+      if (filter === 'all') {
+          $('.recipe').show(); 
+      } else if (filter === 'low') {
+          $('.recipe').hide(); 
+          $('.low').show();    
+      } else if (filter === 'high') {
+          $('.recipe').hide(); 
+          $('.high').show();   
+      }
+  });
+});
+
 
 
