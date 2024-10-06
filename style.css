@@ -804,10 +804,12 @@ ol li {
 
   .footer-logo img {
     margin-bottom: 1.2rem;
+    width: 80%;
   }
 
   .footer-links, .footer-contact, .footer-social {
     margin-bottom: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .footer-links ul {
@@ -817,11 +819,12 @@ ol li {
 
   .footer-links ul li {
     margin-bottom: 0.8rem;
+    font-size: 1.5rem;
   }
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .header {
     padding: 2rem 4%;
   }
@@ -913,7 +916,7 @@ ol li {
 
   .footer-logo img {
     margin-bottom: 1rem;
-    width: 80%; 
+    width: 70%; 
   }
 
   .footer-links, .footer-contact, .footer-social {

@@ -202,25 +202,6 @@ body {
     box-shadow: 0 4px 20px rgba(147, 54, 54, 0.921); /* Tambahkan bayangan saat hover */
 }
 
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .recipe-header {
-        flex-direction: column; /* Stack text and image vertically on small screens */
-    }
-
-    .recipe-text, .recipe-image {
-        max-width: 100%; /* Make both sections full-width */
-        text-align: center; /* Center the text on small screens */
-    }
-
-    .recipe-image {
-        margin-top: 20px; /* Add space between text and image */
-    }
-
-}
-
-
 /* Ingredients section */
 .ingredients-list {
     display: grid;
@@ -328,4 +309,132 @@ input[type="checkbox"] {
 .nutrition-container small {
     font-size: 1.5rem;
     color: #643636;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+    .recipe-card {
+        margin-left: 70px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-card {
+        margin-left: 50px; 
+        width: 600px;
+    }
+    
+    .recipe-header h1 {
+        font-size: 3rem;    
+    }
+    
+    .recipe-desc p {
+        font-size: 1.8rem; 
+        margin-top: 60px;
+        margin-left: -240px;
+    }
+    
+    .recipe-meta p {
+        font-size: 1.4rem; 
+        margin-top: 200px;
+        margin-left: -310px;
+    }
+    
+    .recipe-meta {
+        margin-top: 0rem;
+    }
+
+    .ingredients-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .ingredients-container h3 {
+        font-size: 1.8rem;
+    }
+    
+    
+    .ingredients-container h2, 
+    .instructions-container h2 {
+        font-size: 2.5rem;
+    }
+    
+    .nutrition-container h2 {
+        font-size: 2rem;
+    }
+    
+    .nutrition-container p {
+        font-size: 1.5rem;
+    }
+    
+    .nutrition-container small {
+        font-size: 1.2rem;
+    }
+
+    .ingredients-list li, .instructions-list li {
+       font-size: 1.5rem;
+    }
+
+    input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .recipe-card {
+        margin-left: 3px; 
+        width: 500px;
+    }
+    
+    .recipe-header h1 {
+        font-size: 2rem;    
+    }
+    
+    .recipe-desc p {
+        font-size: 1.5rem; 
+        margin-top: 50px;
+        margin-left: -160px;
+    }
+    
+    .recipe-meta p {
+        font-size: 1.4rem; 
+        margin-left: -250px;
+    }
+    
+    .recipe-meta {
+        margin-bottom: 1rem;
+        margin-top: 0rem;
+    }
+
+    .ingredients-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .ingredients-container h3 {
+        font-size: 1.5rem;
+    }
+    
+    
+    .ingredients-container h2, 
+    .instructions-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .nutrition-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nutrition-container p {
+        font-size: 1.2rem;
+    }
+    
+    .nutrition-container small {
+        font-size: 1.1rem;
+    }
+
+    .ingredients-list li, .instructions-list li {
+       font-size: 1.3rem;
+    }
 }
