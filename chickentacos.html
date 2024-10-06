@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="health, lifestyle, recipes, exercise">
+    <meta name="description" content="How to live a healthy lifestyle">
+    <title>Health n Love</title>
+    <link rel="stylesheet" href="style_recipe.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bystyle.css">
+    <link rel="stylesheet" href="inrecipes_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a class="logo">
+            <img src='/image/logo.png' alt="Logo">
+        </a>
+        <nav class="nav_bar" id="myTopnav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="index.html">Home</a>
+            <a href="exercise.html">Exercise</a>
+            <a href="recipes.html" class="nav_active">Recipes</a>
+            <a href="bmi.html">BMI Calculator</a>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+
+  <!-- Recipe Section -->
+   <!-- Adding the new section for Why You'll Love this Recipe -->
+   <section id="why-love">
+    <h2 class="title">Why You'll Love this Recipe</h2>
+    <ul class="why-love-list">
+        <li>Healthy and delicious flavor-packed meal that comes together in under 30 minutes!</li>
+        <li>The cilantro lime marinade is FANTASTIC and adds so much flavor to these tacos.</li>
+        <li>You’ll also love the creamy avocado crema and tangy coleslaw, but feel free to use whatever toppings you like best!</li>
+    </ul>
+</section>
+
+
+        <section class="recipe-container">
+            <div class="recipe-card"> <!-- Menambahkan container untuk seluruh section -->
+                <div class="recipe-header">
+                    <h1>Lime Chicken Tacos</h1>
+                    <div class="recipe-desc">
+                        <p>This chicken tacos are simple, fresh and delicious making this the perfect EASY summer recipe!</p>
+                    </div>
+                    <div class="recipe-meta">
+                        <p><strong>Prep Time:</strong> 15 mins</p>
+                        <p><strong>Cook Time:</strong> 10 mins</p>
+                        <p><strong>Total Time:</strong> 25 mins</p>
+                        <p><strong>Servings:</strong> 5 Servings</p>
+                    </div>
+                    <div class="recipe-image">
+                        <img src="/image/pop4.jpeg" alt="Chicken Tacos">
+                    </div>
+                </div>
+
+        <!-- Ingredients Section -->
+            <div class="ingredients-container">
+                 <h2>Ingredients</h2>
+                 <h3>Main Ingredient : </h3>
+                    <ul class="ingredients-list">
+                        <li><input type="checkbox" id="ingredient1"> <label for="ingredient1">1 1/2 lbs boneless chicken breasts</label></li>
+                        <li><input type="checkbox" id="ingredient2"> <label for="ingredient2">1/4 tsp salt</label></li>
+                        <li><input type="checkbox" id="ingredient3"> <label for="ingredient3">8 to 10 6 inch flour tortillas</label></li>
+                    </ul>
+                <h3>The marinade :</h3>
+                    <ul class="ingredients-list">
+                        <li><input type="checkbox" id="ingredient4"> <label for="ingredient4">Juice of 2 limes + zest of 1 lime</label></li>
+                        <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">1 Tbsp olive oil</label></li>
+                        <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">2 cloves garlic, minced</label></li>
+                        <li><input type="checkbox" id="ingredient7"> <label for="ingredient7">1/2 tsp honey</label></li>
+                        <li><input type="checkbox" id="ingredient8"> <label for="ingredient8">2 Tbsp cilantro, chopped</label></li>
+                    </ul>
+                <h3>The coleslaw :</h3>
+                    <ul class="ingredients-list">
+                        <li><input type="checkbox" id="ingredient9"> <label for="ingredient9">2 cups shredded green cabbage</label></li>
+                        <li><input type="checkbox" id="ingredient4"> <label for="ingredient4">1 cup shredded red cabbage</label></li>
+                        <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">1 cup shredded carrots</label></li>
+                        <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">1/2 cup chopped cilantro</label></li>
+                        <li><input type="checkbox" id="ingredient7"> <label for="ingredient7">1/2 cup chopped green onions</label></li>
+                        <li><input type="checkbox" id="ingredient8"> <label for="ingredient8">Juice of 2 limes</label></li>
+                        <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">1 Tbsp olive oil</label></li>
+                        <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">1 tsp honey</label></li>
+                        <li><input type="checkbox" id="ingredient7"> <label for="ingredient7">Pinch of salt</label></li>
+                    </ul>
+                <h3>Avocado Cream :</h3>
+                    <ul class="ingredients-list">
+                        <li><input type="checkbox" id="ingredient8"> <label for="ingredient8">1 avocado</label></li>
+                        <li><input type="checkbox" id="ingredient9"> <label for="ingredient9">1 garlic clove, minced</label></li>
+                        <li><input type="checkbox" id="ingredient4"> <label for="ingredient4">1/4 cup cilantro, chopped</label></li>
+                        <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">1/4 cup plain Greek yogurts</label></li>
+                        <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">3 Tbsp lime juice</label></li>
+                        <li><input type="checkbox" id="ingredient7"> <label for="ingredient7">1 tsp Sriracha</label></li>
+                        <li><input type="checkbox" id="ingredient8"> <label for="ingredient8">Salt and pepper</label></li>
+                        <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">2 Tbsp olive oil</label></li>
+                        <li><input type="checkbox" id="ingredient6"> <label for="ingredient6">1/4 to 1/2 cup water</label></li>                        
+                    </ul>
+                </div>
+
+
+       <!-- Instructions Section -->
+                <div class="instructions-container">
+                    <h2>Instructions</h2>
+                    <ol class="instructions-list">
+                        <li>Place chicken in a large ziplock bag or bowl.</li>
+                        <li>To make the marinade, whisk together lime juice, zest, olive oil, garlic, honey, and cilantro until combined and pour over top of chicken until completely coated. Cover and marinate chicken for about 4 hours to overnight.</li>
+                        <li>To make the coleslaw, combine cabbage, carrots, green onions and cilantro in a large bowl. In a smaller bowl, whisk together lime juice, olive oil, honey and salt and toss together with slaw mixture.</li>
+                        <li>To make the avocado crema, combine the avocado, garlic, cilantro, yogurt, lime juice, sriracha and salt/pepper in a food processor and pulse until combined. With the motor running, slowly add the olive oil and water until smooth </li>
+                        <li>Pre-heat outdoor grill or grill pan on medium-high heat and add marinated chicken breasts. Sprinkle with a little salt and cook chicken about 4 to 5 minutes on each side until juices run clear. Transfer chicken to a cutting board and let rest for 5 minutes before cutting. This keeps them juicy!</li>
+                        <li>To assemble the tacos, place chicken in a tortilla and top with slaw and a drizzle of the avocado crema. </li>
+                    </ol>
+                </div>
+
+
+        <!-- Nutrition Section -->
+        <div class="nutrition-container">
+            <h2>Nutrition</h2>
+            <p>Serving: 2tacos | Calories: 407kcal | Carbohydrates: 60.8g | Protein: 31.8g | Fat: 20.4g | Saturated Fat: 5.5g | Sodium: 1.182mg | Fiber: 3.1g | Sugar: 4.3g</p>
+            <small>Nutrition information is automatically calculated, so should only be used as an approximation.</small>
+        </div>
+    </div> <!-- End of recipe-card -->
+</section>
+
+
+ <!-- FOOTER -->
+ <footer>
+    <section class="footer-container">
+        <div class="footer-logo">
+            <img src="/image/logo.png" alt="Health n Love Logo">
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercise.html">Exercise</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="bmi.html">BMI Calculator</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@healthnlove.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="footer-bottom">
+        <p>&copy; 2024 Health n Love. All Rights Reserved.</p>
+    </section>
+</footer>
+
+<a class="back-to-top"><i class="bi bi-arrow-up-square-fill" style="font-size: 5rem;"></i></a>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
