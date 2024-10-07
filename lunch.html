@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="header">
+     <!-- HEADER -->
+     <header class="header">
         <a class="logo">
             <img src='/image/logo.png' alt="Logo">
         </a>
@@ -27,13 +27,25 @@
             </label>
             <a href="index.html" class="nav_active">Home</a>
             <a href="exercise.html">Exercise</a>
-            <a href="recipes.html">Recipes</a>
+            <!-- Dropdown Menu for Recipes -->
+            <div class="dropdown">
+                <a href="recipes.html" class="nav_link">Recipes</a>
+                <ul class="dropdown-content">
+                    <li><a href="breakfast.html">Breakfast</a></li>
+                    <li><a href="lunch.html">Lunch</a></li>
+                    <li><a href="dinner.html">Dinner</a></li>
+                    <li><a href="snacks.html">Snacks</a></li>
+                    <li><a href="gluten.html">Gluten Free</a></li>
+                    <li><a href="salad.html">Salad</a></li>
+                </ul>
+            </div>
             <a href="bmi.html">BMI Calculator</a>
             <div class="search-container">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Search...">
             </div>
         </nav>
+    </header>
     </header>
 
     <section class="page-description">
