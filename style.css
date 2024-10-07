@@ -116,6 +116,59 @@ header:hover {
   display: none; 
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--palette1); /* Add background color */
+  min-width: 140px;
+  z-index: 1;
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  margin-left: 8px;
+  box-shadow: 5px solid var(--palette3);
+  border-radius: 5px;
+}
+
+.dropdown-content li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content li a {
+  color: var(--palette2); /* Text color */
+  padding: 6px 8px; /* Tighter padding */
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+  border-bottom: 1px solid var(--palette3); /* Separator between items */
+  font-size: 14px; /* Adjust font size if needed */
+}
+
+.dropdown-content li a:hover {
+  color: var(--palette5); /* Hover text color */
+  background-color: var(--palette4); /* Subtle background on hover */
+}
+
+.dropdown-content li:last-child a {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown on hover */
+}
+
+.dropdown:hover a {
+  color: var(--palette2); /* Change main Recipes link color on hover */
+}
+
+
 
 
 /* Search Bar */
