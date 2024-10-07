@@ -124,16 +124,15 @@ body {
 }
 
 
-/* Container for buttons */
 .button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px; /* Jarak antar tombol */
+  gap: 100px; 
   margin-top: 20px;
 }
 
-/* Style for each button */
+
 .calorie-button {
   background-color: var(--palette5);
   color: var(--palette2);
@@ -154,18 +153,18 @@ body {
   box-shadow: 0px 6px 8px rgba(166, 42, 42, 0.658);
 }
 
-/* Responsiveness for smaller screens */
+
 @media (max-width: 768px) {
   .button-container {
     margin-left: 100px;
-    flex-direction: column; /* Stack the buttons vertically */
-    gap: 10px; /* Reduce the gap between buttons */
-    align-items: stretch; /* Make buttons take full width */
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: stretch; 
   }
 
   .calorie-button {
-    width: 100%; /* Ensure each button takes full width */
-    text-align: center; /* Center text inside the button */
+    width: 50%; 
+    text-align: center; 
   }
 }
 

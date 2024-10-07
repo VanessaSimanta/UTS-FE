@@ -21,7 +21,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 3rem;
-    background-color: #ffffff; /* Soft background to differentiate section */
+    background-color: #ffffff; 
 }
 
 #why-love .title {
@@ -66,7 +66,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 3rem;
-    background-color: #ffffff; /* Soft background color for tips */
+    background-color: #ffffff; 
 }
 
 #tips .title {
@@ -106,7 +106,7 @@ body {
 }
 
 
-/* Container for the whole recipe section */
+
 .recipe-card {
     background-color: white;
     border: 1px solid var(--palette1);
@@ -114,32 +114,31 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 780px;
-    max-width: 1200px; /* Set maximum width for the card */
-    margin-left: 200px; /* Center align the card */
+    max-width: 1200px; 
+    margin-left: 200px; 
 }
 
 /* Recipe header section */
 .recipe-header {
-    display: flex; /* Keep flex display for horizontal alignment */
-    background-color: var(--palette5); /* Background color */
+    display: flex; 
+    background-color: var(--palette5); 
     padding: 20px;
-    border-bottom: 2px solid var(--palette3); /* Border between header and other sections */
+    border-bottom: 2px solid var(--palette3); 
     border-radius: 8px 8px 0 0;
 }
 
-/* Ensure h1 and paragraph are styled correctly */
 .recipe-header h1 {
-    font-size: 4rem; /* Font size for the title */
+    font-size: 4rem; 
     color: var(--palette4);
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-shadow: var(--palette3)  0px 0px 2px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
     white-space: nowrap;
     
 }
 
 .recipe-desc p {
-    font-size: 2rem; /* Font size for description */
+    font-size: 2rem; 
     color: #333;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: justify;
@@ -151,11 +150,11 @@ body {
 
 /* Recipe meta information - Prep time, cook time, etc. */
 .recipe-meta p {
-    font-size: 1.7rem; /* Font size for meta information */
+    font-size: 1.7rem; 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #4d3535;
     margin-top: 200px;
-    margin-bottom: -200px; /* Spacing between meta info */
+    margin-bottom: -200px;
     margin-left: -430px;
 }
 
@@ -163,17 +162,17 @@ body {
     margin-top: 2rem;
 }
 
-/* Image section on the right */
+
 .recipe-image {
-    flex-shrink: 0; /* Ensure the image stays its size */
-    max-width: 35%; /* Set the width of the image container */
-    margin-left: 20px; /* Add space between text and image */
+    flex-shrink: 0; 
+    max-width: 35%; 
+    margin-left: 20px; 
 }
 
 /* Change the layout for the header text */
 .recipe-header .header-text {
-    display: flex; /* Keep the text section as flex */
-    flex-direction: column; /* Stack header elements vertically */
+    display: flex; 
+    flex-direction: column; 
 }
 
 /* Style for image */
@@ -191,9 +190,9 @@ body {
 
 
 .recipe-image img {
-    width: 100%; /* Make the image responsive */
+    width: 100%;
     border-radius: 8px; /* Add border-radius for rounded corners */
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Tambahkan transisi untuk transformasi, opasitas, dan bayangan */
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .recipe-image img:hover {

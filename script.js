@@ -125,6 +125,181 @@ $(document).ready(function(){
                   scrollTop: $(".bmi-container").offset().top - headerHeight
               }, 500);  
               break;
+            case "breakfast.html":
+              $('html, body').animate({
+                  scrollTop: $(".title").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "lunch.html":
+              $('html, body').animate({
+                  scrollTop: $(".title").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "dinner.html":
+              $('html, body').animate({
+                  scrollTop: $(".title").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "snacks.html":
+              $('html, body').animate({
+                  scrollTop: $(".title").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "gluten.html":
+              $('html, body').animate({
+                  scrollTop: $(".title").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "salad.html":
+              $('html, body').animate({
+                  scrollTop: $(".title").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "pumpkinbread.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "bananabread.html":
+                $('html, body').animate({
+                    scrollTop: $("#why-love").offset().top - headerHeight
+                }, 500);  
+                break;
+            case "beefstew.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+             case "berriessmoothie.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+             case "broccolisalad.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+             case "caesardress.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "chickencaesar.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "chickensatay.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "chickentacos.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "croutons.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "dinner.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "eggcasserole.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "eggmuffin.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "eggsaladcado.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "fudgybrownie.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "herbchicken.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "honeywings.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "italiandress.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "italianpasta.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "lemonshrimp.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "maplechicken.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "mashedpotato.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "potatobites.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "pumpkinbar.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "roastedsalad.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "roastedveggie.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "saladtoast.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "turkeymeetball.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
+            case "veggiesrolls.html":
+              $('html, body').animate({
+                  scrollTop: $("#why-love").offset().top - headerHeight
+              }, 500);  
+              break;
           default:
               console.log("No matching page");
       }
