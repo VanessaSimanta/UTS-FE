@@ -50,6 +50,11 @@ h4 {
   line-height: 1.6;
 }
 
+section {
+  scroll-margin-top: 150px;
+}
+
+
 /* Header */
 header {
   position: sticky;

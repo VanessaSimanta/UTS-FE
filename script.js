@@ -121,11 +121,11 @@ $(document).ready(function(){
     // back to top
     $(".back-to-top").click(function() {
       console.log("Back-to-top button clicked!");
-      const headerHeight = 150;
+      const headerHeight = 200;
       switch (page) {
           case "index.html":
               $('html, body').animate({
-                  scrollTop: $("#slider").offset().top - headerHeight
+                  scrollTop: $("#slider").offset().top 
               }, 500);  
               break;
           case "exercise.html":
