@@ -36,11 +36,15 @@ body {
 #recipe-index h2 {
   font-family: 'Playfair Display', serif;
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: bolder;
   color: var(--palette4);
   text-align: center;
   margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), -2px -2px 4px rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px; /* Menambahkan spasi antar huruf untuk kesan lebih elegan */
 }
+
+
 
 .recipe-categories {
   display: flex;
@@ -128,8 +132,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px; 
+  gap: 110px; 
   margin-top: 20px;
+  margin-left: 80px;
 }
 
 
