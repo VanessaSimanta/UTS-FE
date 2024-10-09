@@ -71,54 +71,64 @@ $(document).ready(function(){
     //funtion untuk search
     //Daftar keyword dan id section yang sesuai
     const keywordMap = {
-        "noncommunicable diseases": "#noncommunicable_diseases",
-        "serangan jantung": "#heart_attack",
-        "heart attack": "#heart_attack",
-        "diabetes": "#diabetes",
-        "diabetes type": "#type",
-        "healthy lifestyle": "#healty_lifestyle",
-        "exercise": "#exercise",
-        "sleep": "#sleep",
-        "stress": "#stress",
-        "smoke": "#smoking",
-        "exercise tips": "#tips",
-        "exercise for older people": "#exercises-seniors",
-        "exercise routine": "#exercises-routines",
-        "sarapan" : "#recipe-index",
-        "breakfast" : "#recipe-index",
-        "lunch" : "#recipe-index",
-        "makan siang" : "#recipe-index",
-        "makan malam" : "#recipe-index",
-        "dinner" : "#recipe-index",
-        "snacks" : "#recipe-index",
-        "gluten free" : "#recipe-index",
-        "bebas gluten" : "#recipe-index",
-        "salad" : "#recipe-index",
-        "sayur" : "#recipe-index",
-        "high calories" : "#calories",
-        "low calories" : "#calories",
-        "kalori" : "#calories",
-        "kalori rendah" : "#calories",
-        "kalori tinggi" : "#calories",
-        "tinggi kalori" : "#calories",
-        "rendah kalori" : "#calories",
+        "noncommunicable diseases": "index.html#noncommunicable_diseases",
+        "serangan jantung": "index.html#heart_attack",
+        "heart attack": "index.html#heart_attack",
+        "diabetes": "index.html#diabetes",
+        "diabetes type": "index.html#type",
+        "healthy lifestyle": "index.html#healty_lifestyle",
+        "exercise": "index.html#exercise",
+        "sleep": "index.html#sleep",
+        "stress": "index.html#stress",
+        "smoke": "index.html#smoking",
+        "exercise tips": "exercise.html#tips",
+        "exercise for older people": "exercise.html#exercises-seniors",
+        "exercise routine": "exercise.html#exercises-routines",
+        "sarapan" : "breakfast.html#recipe-index",
+        "breakfast" : "breakfast.html#recipe-index",
+        "lunch" : "lunch.html#recipe-index",
+        "makan siang" : "lunch.html#recipe-index",
+        "makan malam" : "dinner.html#recipe-index",
+        "dinner" : "dinner.html#recipe-index",
+        "snacks" : "snacks.html#recipe-index",
+        "gluten free" : "gluten.html#recipe-index",
+        "bebas gluten" : "gluten.html#recipe-index",
+        "salad" : "salad.html#recipe-index",
+        "sayur" : "salad.html#recipe-index",
+        "high calories" : "recipes.html#calories",
+        "low calories" : "recipes.html#calories",
+        "kalori" : "recipes.html#calories",
+        "kalori rendah" : "recipes.html#calories",
+        "kalori tinggi" : "recipes.html#calories",
+        "tinggi kalori" : "recipes.html#calories",
+        "rendah kalori" : "recipes.html#calories",
     };
 
     $(".search-container input[type='text']").on('keypress', function(e) {
-        //13 = asci enter
-        if (e.which === 13) { 
-            const keyword = $(this).val().toLowerCase(); 
-            const headerHeight = 150;
-            //if keyword ada di keyword map
-            if (keywordMap[keyword]) {
-                $('html, body').animate({
-                scrollTop: $(keywordMap[keyword]).offset().top - headerHeight
-                }, 800);
-            } else {
-                alert("Hasil Pencarian Tidak Ada");
-            }
-        }
-    });
+      // 13 = ASCII untuk tombol Enter
+      if (e.which === 13) {
+          const keyword = $(this).val().toLowerCase();
+          const headerHeight = 150;
+  
+          if (keywordMap[keyword]) {
+              const targetUrl = keywordMap[keyword];
+              const [targetPage, targetHash] = targetUrl.split("#");
+  
+              // Cek apakah pengguna sudah di halaman yang benar
+              if (window.location.pathname.endsWith(targetPage)) {
+                  // Jika di halaman yang benar, lakukan scroll ke bagian yang ditentukan
+                  $('html, body').animate({
+                      scrollTop: $("#" + targetHash).offset().top - headerHeight
+                  }, 800);
+              } else {
+                  // Jika tidak di halaman yang benar, arahkan pengguna ke halaman yang sesuai
+                  window.location.href = targetUrl; // Ini akan otomatis scroll ke hash di halaman baru
+              }
+          } else {
+              alert("Hasil Pencarian Tidak Ada");
+          }
+      }
+  });
     
     // back to top
     $(".back-to-top").click(function() {
