@@ -16,8 +16,8 @@
 </head>
 
 <body>
-     <!-- HEADER -->
-     <header class="header">
+    <!-- HEADER -->
+    <header class="header">
         <a class="logo">
             <img src='/image/logo.png' alt="Logo">
         </a>
@@ -26,8 +26,24 @@
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
-            <a href="index.html" class="nav_active">Home</a>
-            <a href="exercise.html">Exercise</a>
+            <!-- Dropdown Menu for Home -->
+            <div class="dropdown">
+                <a href="index.html" class="nav_link">Home</a>
+                <ul class="dropdown-content">
+                    <li><a href="index.html#heart_attack">Heart Attack</a></li>
+                    <li><a href="index.html#diabetes">Diabetes</a></li>
+                    <li><a href="index.html#healty_lifestyle">Healthy Lifestyle</a></li>
+                </ul>
+            </div>
+            <!-- Dropdown Menu for Exercise -->
+            <div class="dropdown">
+                <a href="exercise.html" class="nav_link">Exercise</a>
+                <ul class="dropdown-content">
+                    <li><a href="exercise.html#tips">Exercise Tips</a></li>
+                    <li><a href="exercise.html#exercises-seniors">Exercise for Seniors</a></li>
+                    <li><a href="exercise.html#exercises-routines">Exercise Routines</a></li>
+                </ul>
+            </div>
             <!-- Dropdown Menu for Recipes -->
             <div class="dropdown">
                 <a href="recipes.html" class="nav_link">Recipes</a>
@@ -47,6 +63,7 @@
             </div>
         </nav>
     </header>
+
     
   <!-- Recipe Section -->
    <!-- Adding the new section for Why You'll Love this Recipe -->

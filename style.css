@@ -136,10 +136,10 @@ header:hover {
   list-style-type: none; /* Remove bullets */
   padding: 0;
   margin: 0;
-  margin-left: 8px;
-  box-shadow: 5px solid var(--palette3);
-  border-radius: 5px;
+  margin-left: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
 }
+
 
 .dropdown-content li {
   display: block;
@@ -149,7 +149,7 @@ header:hover {
 
 .dropdown-content li a {
   color: var(--palette2); /* Text color */
-  padding: 6px 8px; /* Tighter padding */
+  padding: 2px 6px; /* Tighter padding */
   text-decoration: none;
   display: block;
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
