@@ -144,6 +144,7 @@ hr {
   list-style-type: none; 
   padding: 0;
   margin: 0;
+  margin-left: 14px;
   padding-right: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
 }
@@ -157,7 +158,7 @@ hr {
 
 .dropdown-content li a {
   color: var(--palette2); 
-  padding: 1rem; 
+  padding: 0.2rem 1rem; 
   text-decoration: none;
   display: block;
   transition: color 0.3s ease, background-color 0.3s ease;
