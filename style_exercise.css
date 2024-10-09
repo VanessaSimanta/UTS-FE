@@ -17,12 +17,12 @@
     letter-spacing: 2px; 
 }
 
-#tips ul {
+#tips .div {
     list-style-type: disc;
     padding-left: 2rem;
 }
 
-#tips ul li {
+#tips .div {
     font-size: 1.8rem;
     color: var(--palette2);
     margin-bottom: 1.5rem;
@@ -31,14 +31,14 @@
     position: relative;
 }
 
-#tips ul li::before {
+#tips div::before {
     color: var(--palette3);
     font-weight: bold;
     position: absolute;
     left: -2rem;
 }
 
-#tips ul li:hover {
+#tips div:hover {
     color: var(--palette3);
     font-weight: bold;
     transform: translateX(5px);
@@ -87,7 +87,7 @@
 }
 
 /*style button filtering*/
-.exercise-list {
+.exercise-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +95,6 @@
     margin-top: 20px;
     margin-left: 80px;
   }
-  
   
   .sorting2 {
     background-color: var(--palette5);
@@ -203,7 +202,7 @@
     list-style-type: none; 
 }
 
-#exerciseList li {
+#exerciseList{
     background-color: var(--palette5);
     padding: 2rem;
     border-radius: 10px;
@@ -213,12 +212,12 @@
 }
 
 
-#exerciseList li:hover {
+#exerciseList ::before {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-#exerciseList img {
+#exercise-name {
     width: 350px;
     height: 250px;
     object-fit: cover;
@@ -234,14 +233,14 @@
     margin-bottom: 1rem;
 }
 
-#exerciseList em {
+#exercise-name {
     font-size: 1.4rem;
     color: var(--palette3);
     margin-bottom: 1rem;
     display: block;
 }
 /* Media query */
-@media only screen and (max-width: 992) {
+@media only screen and (max-width: 992px) {
     #exercises {
         padding: 1rem 5%;
     }
@@ -254,7 +253,7 @@
         grid-template-columns: 1fr;
     }
   
-    #exerciseList li {
+    #exerciseList {
         padding: 1.5rem;
     }
   
@@ -288,7 +287,7 @@
         font-size: 2rem;
     }
   
-    #exerciseList li {
+    #exerciseList {
         padding: 1rem;
     }
   
@@ -317,7 +316,7 @@
         font-size: 3.5rem;
     }
   
-    #exerciseList li {
+    #exerciseList {
         padding: 2.5rem;
     }
   
