@@ -57,29 +57,6 @@
 
 }
 
-
-#sortExercise {
-    font-size: 1.6rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid var(--palette4);
-    background-color: var(--palette5);
-    color: var(--palette2);
-    outline: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-#sortExercise:hover {
-    background-color: var(--palette1);
-    color: #fff;
-    border-color: var(--palette3);
-}
-
-#sortExercise:focus {
-    box-shadow: 0 0 5px var(--palette3);
-}
-
 /* Exercise Routine */
 #exercises-routines {
     padding: 2rem 10%;
@@ -91,12 +68,13 @@
 }
 
 .exercise-item {
+    height: 600px;
     background-color: var(--palette5);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .exercise-name {
@@ -113,14 +91,16 @@
 .exercise-item em {
     text-align: justify;
     margin-top: 0;
+    color: var(--palette4);
 }
 
 .advantages {
     text-align: justify;
     margin-bottom: 1rem;
+    color: var(--palette4);
 }
 /*style button filtering*/
-#exercise-button {
+.exercise-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +109,7 @@
     margin-left: 80px;
   }
   
-  .sorting2 {
+  .sorting2, .sorting, .sorting1 {
     background-color: var(--palette5);
     color: var(--palette2);
     padding: 10px 20px;
@@ -143,74 +123,12 @@
     transition: all 0.3s ease;
   }
   
-  .sorting2:hover {
+  .sorting2:hover, .sorting:hover, .sorting1:hover{
     background-color: var(--palette3);
     color: white;
     box-shadow: 0px 6px 8px rgba(166, 42, 42, 0.658);
   }
   
-  .sorting {
-    background-color: var(--palette5);
-    color: var(--palette2);
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 1px solid #f8b19c;
-    border-radius: 8px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .sorting:hover {
-    background-color: var(--palette3);
-    color: white;
-    box-shadow: 0px 6px 8px rgba(166, 42, 42, 0.658);
-  }
-
-  .sorting1 {
-    background-color: var(--palette5);
-    color: var(--palette2);
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 1px solid #f8b19c;
-    border-radius: 8px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .sorting1:hover {
-    background-color: var(--palette3);
-    color: white;
-    box-shadow: 0px 6px 8px rgba(166, 42, 42, 0.658);
-  }
-
-
-#sortExercise {
-    font-size: 1.6rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid var(--palette4);
-    background-color: var(--palette5);
-    color: var(--palette2);
-    outline: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-#sortExercise:hover {
-    background-color: var(--palette1);
-    color: #fff;
-    border-color: var(--palette3);
-}
-
-#sortExercise:focus {
-    box-shadow: 0 0 5px var(--palette3);
-}
 
 /* Exercise List */
 #exerciseList {
@@ -221,66 +139,42 @@
     margin: 0;
 }
 
-
 #exerciseList ::before {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-#exercise-name {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-}
-
-
 .exercise-name {
     font-size: 2rem;
     font-weight: bold;
     color: var(--palette2);
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
-#exercise-name {
-    font-size: 1.4rem;
-    color: var(--palette3);
-    margin-bottom: 1rem;
-    display: block;
-}
 /* Media query */
 @media only screen and (max-width: 992px) {
-    #exercises {
-        padding: 1rem 5%;
+    #tips .title {
+        font-size: 3.2rem;
     }
-  
-    #exercises .title {
-        font-size: 2.5rem;
-    }
-  
+
     #exerciseList {
-        grid-template-columns: 1fr;
-    }
-  
-    #exerciseList {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
         padding: 1.5rem;
-    }
+    }    
   
     #exerciseList img {
         width: 100%;
-        height: auto;
+        height: 250px;
     }
   
     .exercise-name {
         font-size: 1.8rem;
     }
-  
-    #Exercise {
-        font-size: 1.4rem;
-        padding: 0.4rem 0.8rem;
+
+    .exercise-item {
+        height: 520px;
     }
-  
     
     #exercises-seniors .title, #exercises-routines .title {
         font-size: 2.2rem;
@@ -289,14 +183,6 @@
   
   /* Media query */
   @media only screen and (max-width: 768px) {
-    #exercises {
-        padding: 0.5rem 2%;
-    }
-  
-    #exercises .title {
-        font-size: 2rem;
-    }
-  
     #exerciseList {
         padding: 1rem;
     }
@@ -304,12 +190,33 @@
     .exercise-name {
         font-size: 1.5rem;
     }
+
+    #exerciseList {
+        display: grid;
+        grid-template-columns: 1fr; 
+        width: 100%;
+        padding: 1.5rem;
+    }    
   
-    #sortExercise {
-        font-size: 1.2rem;
-        padding: 0.3rem 0.6rem;
+    #exerciseList img {
+        width: 90%;
+        margin-left: 2rem;
+        height: 320px;
     }
-  
+
+    .exercise-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .exercise-item {
+        height: 540px;
+    }
   
     #exercises-seniors .title, #exercises-routines .title {
         font-size: 2rem;
@@ -323,11 +230,12 @@
     }
   
     #exercises .title {
-        font-size: 3.5rem;
+        font-size: 30rem;
     }
   
     #exerciseList {
         padding: 2.5rem;
+        align-items: center;
     }
   
     .exercise-name {

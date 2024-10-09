@@ -339,7 +339,6 @@ $(document).ready(function(){
       }
     });
 
-  
     //BMI Calculator
       const bmiText = $("#bmi");
       const descText = $("#desc");
@@ -416,7 +415,6 @@ $(document).ready(function(){
       tag.forEach((tag) => {
         observer.observe(tag)
       })
-});
 
 
   // Sorting Button Functionality
@@ -448,28 +446,26 @@ $(".sorting2").click(function() {
 });
 
  //fungsi js untuk checbox ingredients recipes 
-  $(document).ready(function() {
-    $('input[type="checkbox"]').click(function() {
-        if ($(this).is(':checked')) {
-            $(this).next('label').css({
-                'text-decoration': 'line-through',
-                'margin-left': '10px' 
-            });
-            $(this).addClass('checked');
-        } else {
-            $(this).next('label').css({
-                'text-decoration': 'none',
-                'margin-left': '10px' 
-            });
-            $(this).removeClass('checked');
-        }
-    });
-    // Tambahkan jarak default pada semua label di awal
-    $('input[type="checkbox"]').next('label').css('margin-left', '8px');
-});
+  $('input[type="checkbox"]').click(function() {
+      if ($(this).is(':checked')) {
+          $(this).next('label').css({
+              'text-decoration': 'line-through',
+              'margin-left': '10px' 
+          });
+          $(this).addClass('checked');
+      } else {
+          $(this).next('label').css({
+              'text-decoration': 'none',
+              'margin-left': '10px' 
+          });
+          $(this).removeClass('checked');
+      }
+  });
+  // Tambahkan jarak default pada semua label di awal
+  $('input[type="checkbox"]').next('label').css('margin-left', '8px');
+
 
 //JS untuk filtering calories in recipes
-$(document).ready(function() {
   $('.recipe').show();
   $('.calorie-button').click(function() {
       var filter = $(this).data('filter');
