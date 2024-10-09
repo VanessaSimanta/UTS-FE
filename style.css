@@ -77,6 +77,15 @@ header:hover {
   background-color: var(--palette1);
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--palette2); 
+  opacity: 30%;
+  box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 .logo img {
   max-width: 300px;
   margin-right: auto; 
@@ -281,9 +290,10 @@ section {
   font-size: 2.8rem;
   text-align: center;
   font-weight: bold;
-  color: var(--palette2);
+  color: var(--palette4);
   margin-top: 1rem;
   margin-bottom: 1rem;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .content-container {

@@ -51,7 +51,10 @@
 }
 
 #exercises-seniors .title {
+    color: var(--palette4);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem; 
+
 }
 
 
@@ -83,6 +86,8 @@
 }
 
 #exercises-routines .title {
+    color: var(--palette4);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem; 
 }
 
