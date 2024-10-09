@@ -18,6 +18,11 @@ $(document).ready(function(){
         }
     });
 
+    //untuk responsive navbar
+    $(".checkbtn").click(function() {
+      $("#myTopnav").toggleClass("responsive");
+  });
+
     //function untuk expanded search bar
     $(".search-container i").click(function(){
         const searchInput = $(".search-container input[type='text']");
@@ -133,6 +138,28 @@ $(document).ready(function(){
           }
       }
   });
+
+$(".search-container input[type='text']").on('input', function() {
+    const searchVal = $(this).val().toLowerCase();
+    let suggestions = [];
+
+    // Cari kata kunci yang mengandung input pencarian
+    for (let keyword in keywordMap) {
+        if (keyword.includes(searchVal)) {
+            suggestions.push(`<li>${keywordMap[keyword]}</li>`);
+        }
+    }
+
+    // Tampilkan suggestions di dalam ul.suggestions-list
+    $(".suggestions-list").html(suggestions.join(''));
+
+    // Jika tidak ada hasil pencarian, kosongkan daftar
+    if (suggestions.length === 0) {
+        $(".suggestions-list").html('<li>No results found</li>');
+    }
+});
+
+
     
     // back to top
     $(".back-to-top").click(function() {
