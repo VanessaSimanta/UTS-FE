@@ -8,7 +8,8 @@
 
 #tips .title {
     font-size: 3rem;
-    color: var(--palette2);
+    color: var(--palette4);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -47,7 +48,10 @@
 }
 
 #exercises-seniors .title {
+    color: var(--palette4);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem; 
+
 }
 
 .exercise-list {
@@ -91,6 +95,8 @@
 }
 
 #exercises-routines .title {
+    color: var(--palette4);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem; 
 }
 
