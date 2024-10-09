@@ -118,16 +118,22 @@ hr {
   border-bottom: 2px solid var(--palette3);
 }
 
+.nav_bar.responsive a,
+.nav_bar.responsive .dropdown a,
+.nav_bar.responsive .search-container {
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
 .checkbtn {
   font-size: 30px;
   color: var(--palette2);
   display: none; 
   float: right;
   align-items:end;
-}
-
-#check {
-  display: none; 
+  cursor: pointer;
 }
 
 .dropdown {
@@ -728,14 +734,6 @@ ol li {
     align-items: flex-start;
     margin-left: 5rem;
     width: 80%;
-  }
-
-  .nav_bar #check:checked ~ a,
-  .nav_bar #check:checked ~ .dropdown a,
-  .nav_bar #check:checked ~ .search-container {
-      display: block; 
-      margin: 1rem;
-      padding: 0.5rem;
   }
 
   .dropdown-content {
