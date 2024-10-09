@@ -50,7 +50,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 90px;
+  margin-left: -50px;
+  gap: 100px;
 }
 
 .category {
@@ -162,7 +163,7 @@ body {
 
 @media (max-width: 768px) {
   .button-container {
-    margin-left: 100px;
+    margin-left: 220px;
     flex-direction: column; 
     gap: 10px; 
     align-items: stretch; 
