@@ -7,11 +7,14 @@
 }
 
 #tips .title {
-    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: bolder;
     color: var(--palette4);
-    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2rem;
     text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), -2px -2px 4px rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px; 
 }
 
 #tips ul {
@@ -54,18 +57,6 @@
 
 }
 
-.exercise-list {
-    margin-bottom: 2rem;
-    margin-top: 2rem; 
-    text-align: center;
-}
-
-.exercise-list label {
-    font-size: 1.8rem;
-    color: var(--palette2);
-    font-weight: bold;
-    margin-right: 1rem;
-}
 
 #sortExercise {
     font-size: 1.6rem;
@@ -100,18 +91,90 @@
     margin-bottom: 2rem; 
 }
 
+/*style button filtering*/
 .exercise-list {
-    margin-bottom: 2rem;
-    margin-top: 2rem; 
-    text-align: center;
-}
-
-.exercise-list label {
-    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px; 
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+  
+  
+  .sorting2 {
+    background-color: var(--palette5);
     color: var(--palette2);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #f8b19c;
+    border-radius: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    margin-right: 1rem;
-}
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .sorting2:hover {
+    background-color: var(--palette3);
+    color: white;
+    box-shadow: 0px 6px 8px rgba(166, 42, 42, 0.658);
+  }
+  
+  .sorting {
+    background-color: var(--palette5);
+    color: var(--palette2);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #f8b19c;
+    border-radius: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .sorting:hover {
+    background-color: var(--palette3);
+    color: white;
+    box-shadow: 0px 6px 8px rgba(166, 42, 42, 0.658);
+  }
+
+  .sorting1 {
+    background-color: var(--palette5);
+    color: var(--palette2);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #f8b19c;
+    border-radius: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .sorting1:hover {
+    background-color: var(--palette3);
+    color: white;
+    box-shadow: 0px 6px 8px rgba(166, 42, 42, 0.658);
+  }
+  
+  @media (max-width: 768px) {
+    .exercise-list {
+      margin-left: 100px;
+      flex-direction: column; 
+      gap: 10px; 
+      align-items: stretch; 
+    }
+  
+    .exercise-list {
+      width: 50%; 
+      text-align: center; 
+    }
+  }
 
 #sortExercise {
     font-size: 1.6rem;
@@ -209,15 +272,12 @@
         font-size: 1.8rem;
     }
   
-    #sortExercise {
+    #Exercise {
         font-size: 1.4rem;
         padding: 0.4rem 0.8rem;
     }
   
-    .exercise-list label {
-        font-size: 1.6rem;
-    }
-  
+    
     #exercises-seniors .title, #exercises-routines .title {
         font-size: 2.2rem;
     }
@@ -246,9 +306,6 @@
         padding: 0.3rem 0.6rem;
     }
   
-    .exercise-list label {
-        font-size: 1.4rem;
-    }
   
     #exercises-seniors .title, #exercises-routines .title {
         font-size: 2rem;
@@ -278,9 +335,6 @@
         padding: 0.6rem 1.2rem;
     }
   
-    .exercise-list label {
-        font-size: 2rem;
-    }
   
     #exercises-seniors .title, #exercises-routines .title {
         font-size: 2.8rem;
