@@ -24,29 +24,15 @@ $(document).ready(function(){
         searchInput.focus();
     });    
 
-    //JS UNTUK CAROUSEL
-    let slideIndex = 0;
-    showSlides();
+    // Variable header height
+    const headerHeight = 200;
 
-    function showSlides() {
-        let slides = $(".mySlides");
-        let dots = $(".dot");
-        slides.hide(); 
-        slideIndex++;
-
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        } 
-
-        dots.removeClass("active"); 
-        $(slides[slideIndex - 1]).show(); 
-        $(dots[slideIndex - 1]).addClass("active"); 
-    }
-
-    setInterval(function() {
-        //manggil functuin show slides
-        showSlides();
-    }, 5000);
+    //button get started
+    $('#myButton').on('click', function() {
+      $('html, body').animate({
+          scrollTop: $("#noncommunicable_diseases").offset().top - headerHeight
+      }, 1000); 
+  });
 
     //JS UNTUK BUTTON RECIPES
     $(".button1").click(function(){
@@ -137,7 +123,6 @@ $(document).ready(function(){
     // back to top
     $(".back-to-top").click(function() {
       console.log("Back-to-top button clicked!");
-      const headerHeight = 200;
       switch (page) {
           case "index.html":
               $('html, body').animate({
@@ -480,6 +465,111 @@ $(".sorting2").click(function() {
           $('.high').show();   
       }
   });
+
+  // Main screen
+  var w = $(window).width(),
+  h = $(window).height(),
+  canvas = $('#canvas')[0],
+  ctx = canvas.getContext('2d'),
+  rate = 60,
+  // Number of items to display
+  arc = 100,
+  time,
+  count,
+  size = 5,
+  speed = 20,
+  // Store generated particles
+  parts = [],
+  colors = ['#B23A48', '#f57900', '#FCB9B2', '#FED0BB', '#5c3566'];
+
+  var mouse = { x: 0, y: 0 };
+
+  // Set canvas size
+  $(canvas).attr('width', w).attr('height', h);
+
+  // Create particles
+  function create() {
+    time = 0;
+    count = 0;
+
+    for (var i = 0; i < arc; i++) {
+        parts[i] = {
+            x: Math.ceil(Math.random() * w),
+            y: Math.ceil(Math.random() * h),
+            toX: Math.random() * 5 - 1,
+            toY: Math.random() * 2 - 1,
+            c: colors[Math.floor(Math.random() * colors.length)],
+            size: Math.random() * size
+        };
+    }
+  }
+
+  function particles() {
+    // Clear canvas
+    ctx.clearRect(0, 0, w, h);
+    // Detect mouse movement
+    $(canvas).on('mousemove', MouseMove);
+
+    // Calculate responsive font sizes
+    var largeFontSize = Math.max(50, Math.min(w * 0.08, h * 0.15)); 
+    var smallFontSize = Math.max(20, Math.min(w * 0.02, h * 0.05)); 
+
+    ctx.font = largeFontSize + "px Playfair Display";
+    ctx.fillStyle = "pink";
+    ctx.shadowColor = "black";
+    ctx.shadowBlur = 10;
+    ctx.shadowOffsetX = 5;
+    ctx.shadowOffsetY = 5;
+    ctx.fillText("Love And Health", (w / 2) - (ctx.measureText("Love And Health").width / 2), h * 0.35); 
+
+    ctx.font = smallFontSize + "px Arial";
+    ctx.fillStyle = "pink";
+    ctx.shadowBlur = 5;
+    ctx.fillText("Your Guide to Healthy Living", (w / 2) - (ctx.measureText("Your Guide to Healthy Living").width / 2), h * 0.45);
+    
+    // Loop through created particles to set positions
+    for (var i = 0; i < arc; i++) {
+        var li = parts[i];
+        var distanceFactor = DistanceBetween(mouse, parts[i]);
+        distanceFactor = Math.max(Math.min(15 - (distanceFactor / 10), 10), 1);
+        ctx.beginPath();
+        // Shape it as a circle
+        ctx.arc(li.x, li.y, li.size * distanceFactor, 0, Math.PI * 2, false);
+        ctx.fillStyle = li.c;
+        ctx.strokeStyle = li.c;
+        if (i % 2 === 0)
+            ctx.stroke();
+        else
+            ctx.fill();
+
+        li.x += li.toX * (time * 0.05);
+        li.y += li.toY * (time * 0.05);
+
+        // Wrap around if out of bounds
+        if (li.x > w) li.x = 0;
+        if (li.y > h) li.y = 0;
+        if (li.x < 0) li.x = w;
+        if (li.y < 0) li.y = h;
+    }
+    if (time < speed) time++;
+    setTimeout(particles, 1000 / rate);
+  }
+
+  // On mouse move, particles grow larger
+  function MouseMove(e) {
+    mouse.x = e.offsetX || e.layerX;
+    mouse.y = e.offsetY || e.layerY;
+  }
+
+  // Calculate the distance between mouse and particle
+  function DistanceBetween(p1, p2) {
+    var dx = p2.x - p1.x;
+    var dy = p2.y - p1.y;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  create();
+  particles();
 });
 
 

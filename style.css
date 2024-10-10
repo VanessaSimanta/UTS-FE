@@ -31,6 +31,13 @@ body {
   user-select: text;
 }
 
+html {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
 h3 {
   color: var(--palette4);
   text-align: center;
@@ -180,6 +187,30 @@ hr {
   display: block;
 }
 
+canvas { 
+  overflow: hidden;
+  width:100vw;
+  height:100vh;
+  background-color:var(--palette2); 
+}
+
+/* Button Styling */
+#button-container {
+  position: absolute;
+  top: 600px; 
+  left: 600px;
+  width: 200px;
+  height: 50px;
+}
+
+#myButton {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 50px;
+}
+
 /* Search Bar */
 .search-container {
   display: flex;
@@ -219,52 +250,6 @@ hr {
 
 .search-container i:hover {
   color: var(--palette3);
-}
-
-/* Carousel */
-#slider {
-  background: rgba(252, 255, 192, 0.2);
-  padding: 0;
-}
-
-.slideshow-container {
-  z-index: 1;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-  display: none;
-  position: relative;
-}
-
-.mySlides img {
-  width: 100%;
-  border-radius: 30px;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 4px;
-  background-color: var(--palette2);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: var(--palette4);
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from { opacity: .4; }
-  to { opacity: 1; }
 }
 
 /* Sections */
@@ -755,6 +740,17 @@ ol li {
       margin-right: 1rem; 
   }
 
+  canvas { 
+    height:90vh;
+  }
+
+  #button-container {
+    top: 500px; 
+    left: 400px;
+    width: 200px;
+    height: 50px;
+  }
+
   .content-container, .content-container-2, .content-container-3 {
     flex-direction: column;
   }
@@ -813,6 +809,15 @@ ol li {
   .logo img {
     max-width: 200px;
     margin-right: 1rem;
+  }
+
+  
+
+  #button-container {
+    top: 480px; 
+    left: 280px;
+    width: 200px;
+    height: 50px;
   }
 
   .text-container-1, .text-container-2{
@@ -889,6 +894,17 @@ ol li {
   .logo img{
     width: 180px;
     margin-right: 1rem;
+  }
+
+  canvas { 
+    height:90vh;
+  }
+
+  #button-container {
+    top: 480px; 
+    left: 180px;
+    width: 200px;
+    height: 50px;
   }
 
   .nav_bar .dropdown {
