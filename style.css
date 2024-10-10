@@ -196,11 +196,16 @@ canvas {
 
 /* Button Styling */
 #button-container {
-  position: absolute;
-  top: 600px; 
-  left: 640px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
   width: 200px;
   height: 50px;
+  position: absolute;
+  top: 80%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  
 }
 
 #myButton {
@@ -745,10 +750,7 @@ ol li {
   }
 
   #button-container {
-    top: 500px; 
-    left: 400px;
-    width: 200px;
-    height: 50px;
+    top: 70%; 
   }
 
   .content-container, .content-container-2, .content-container-3 {
