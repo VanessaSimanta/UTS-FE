@@ -198,7 +198,7 @@ canvas {
 #button-container {
   position: absolute;
   top: 600px; 
-  left: 600px;
+  left: 640px;
   width: 200px;
   height: 50px;
 }
@@ -207,7 +207,7 @@ canvas {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  width: 200px;
+  width: 260px;
   height: 50px;
 }
 

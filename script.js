@@ -122,11 +122,10 @@ $(document).ready(function(){
     
     // back to top
     $(".back-to-top").click(function() {
-      console.log("Back-to-top button clicked!");
       switch (page) {
           case "index.html":
               $('html, body').animate({
-                  scrollTop: $("#slider").offset().top 
+                  scrollTop: $("#canvas").offset().top - headerHeight
               }, 500);  
               break;
           case "exercise.html":
@@ -323,7 +322,7 @@ $(document).ready(function(){
               console.log("No matching page");
       }
     });
-
+ 
     //BMI Calculator
       const bmiText = $("#bmi");
       const descText = $("#desc");
@@ -400,20 +399,6 @@ $(document).ready(function(){
       tag.forEach((tag) => {
         observer.observe(tag)
       })
-
-
-  // Sorting Button Functionality
-  $(".sort-btn").click(function() {
-      let sortType = $(this).data('sort');
-      if (sortType === 'default') {
-          // Implement sorting logic for 'Workout at Home'
-          console.log("Sorting by Workout at Home");
-      } else if (sortType === 'name') {
-          // Implement sorting logic for 'Simple Workout'
-          console.log("Sorting by Simple Workout");
-      }
-
-});
 
   //Sorting untuk exercises
   $(".sorting").click(function() {
